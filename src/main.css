@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+body {
+  @apply w-full flex h-full m-0;
+}
+
+#root {
+  @apply grow;
+}

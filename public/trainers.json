@@ -1,0 +1,37 @@
+[
+  {
+    "name": "John Smith",
+    "role": "Strength & Conditioning Coach",
+    "experience": "10+ years",
+    "bio": "John specializes in strength training, powerlifting, and building muscle mass. He has trained professional athletes and beginners alike.",
+    "avatar": "https://images.pexels.com/photos/7676373/pexels-photo-7676373.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  {
+    "name": "Lisa Thompson",
+    "role": "Yoga & Flexibility Expert",
+    "experience": "8+ years",
+    "bio": "Lisa helps clients improve flexibility, posture, and mental well-being through yoga and mobility training.",
+    "avatar": "https://images.pexels.com/photos/3822838/pexels-photo-3822838.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  {
+    "name": "Michael Johnson",
+    "role": "Personal Trainer & Weight Loss Specialist",
+    "experience": "12+ years",
+    "bio": "Michael has helped hundreds of clients achieve their weight loss and fitness goals with personalized training plans and nutrition guidance.",
+    "avatar": "https://images.pexels.com/photos/4325465/pexels-photo-4325465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  {
+    "name": "Sophia Martinez",
+    "role": "HIIT & Functional Training Coach",
+    "experience": "7+ years",
+    "bio": "Sophia specializes in high-intensity interval training (HIIT) and functional workouts, helping clients increase endurance and agility.",
+    "avatar": "https://images.pexels.com/photos/6456001/pexels-photo-6456001.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  {
+    "name": "David Brown",
+    "role": "Bodybuilding & Nutrition Expert",
+    "experience": "15+ years",
+    "bio": "David is a professional bodybuilder and nutritionist who helps clients build lean muscle and optimize their diet for peak performance.",
+    "avatar": "https://images.pexels.com/photos/7031714/pexels-photo-7031714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  }
+]
