@@ -1,4 +1,8 @@
-const WorkoutOptions = ({ Strength, Cardio, Yoga }) => {
+import Strength from "../../assets/home_PNGs/strength.jpg";
+import Cardio from "../../assets/home_PNGs/cardio.jpg";
+import Yoga from "../../assets/home_PNGs/yoga.jpeg";
+
+const WorkoutOptions = () => {
   return (
     <section className="w-full h-auto py-8 px-0 flex flex-col items-center gap-y-7 mt-6">
       <article className="text-white max-w-xl text-center">
@@ -12,7 +16,7 @@ const WorkoutOptions = ({ Strength, Cardio, Yoga }) => {
           have the perfect prgram for you!
         </p>
       </article>
-      <section className="w-full  grid grid-cols-[repeat(auto, minmax(w-1/2, 1fr))] gap-5 text-center font-[Montserrat] md:w-4/5 md:border-2 md:border-gray-200 md:border-solid md:rounded-sm overflow-hidden">
+      <section className="w-full grid grid-cols-[repeat(auto, minmax(w-1/2, 1fr))] gap-5 text-center font-[Montserrat] md:w-4/5 ">
         <figure className="order-last col-span-2 hover:scale-105 transition-transform duration-300">
           <img
             src={Strength}
@@ -44,7 +48,7 @@ const WorkoutOptions = ({ Strength, Cardio, Yoga }) => {
           </figcaption>
         </figure>
       </section>
-      <p className="text-gray-200 text-xl text-wrap font-[Montserrat]">
+      <p className="text-gray-200 text-sm text-wrap font-[Montserrat] text-center">
         💡 No matter Yout fitness level, we have the perfecct workout for you!
       </p>
     </section>

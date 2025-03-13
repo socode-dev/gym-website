@@ -5,8 +5,8 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full h-auto py-4 bg-inherit border-t-2 border-solid border-t-neutral-950 shadow-neutral-950">
-      <div className="px-5 py-5 w-full h-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+    <footer className="w-full h-auto pb-2 bg-inherit border-t-2 border-solid border-t-neutral-950 shadow-neutral-950">
+      <div className="px-5 py-5 w-full h-auto grid grid-cols-1 md:grid-cols-4 gap-5">
         <div className="flex flex-col gap-y-4 w-fit">
           <h2 className="text-4xl text-red-700 font-bold font-[Raleway]">
             XtremeFit
@@ -46,25 +46,25 @@ const Footer = () => {
           <div className="flex flex-wrap gap-4">
             <a
               href="#"
-              className="cursor-pointer hover:scale-50 hover:rotate-180 transition-transform duration-200"
+              className="cursor-pointer hover:scale-50 hover:rotate-180 transition-transform duration-300"
             >
               <FaInstagram className="text-red-600 text-3xl " />
             </a>
             <a
               href="#"
-              className="cursor-pointer hover:scale-50 hover:rotate-180 transition-transform duration-200"
+              className="cursor-pointer hover:scale-50 hover:rotate-180 transition-transform duration-300"
             >
               <FaTwitter className="text-blue-600 text-3xl" />
             </a>
             <a
               href="#"
-              className="cursor-pointer hover:scale-50 hover:rotate-180 transition-transform duration-200"
+              className="cursor-pointer hover:scale-50 hover:rotate-180 transition-transform duration-300"
             >
               <FaFacebook className="text-blue-800 text-3xl" />
             </a>
             <a
               href="#"
-              className="cursor-pointer hover:scale-50 hover:rotate-180 transition-transform duration-200"
+              className="cursor-pointer hover:scale-50 hover:rotate-180 transition-transform duration-300"
             >
               <FaLinkedin className="text-blue-800 text-3xl" />
             </a>
@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="pr-3">
-        <p className="text-sm text-end text-gray-400 font-[Montserrat]">
+        <p className="text-sm text-end text-gray-400 italic font-[Montserrat]">
           &copy; {year} XtremeFit. All rights reserved.
         </p>
       </div>

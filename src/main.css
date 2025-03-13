@@ -8,3 +8,18 @@ body {
 #root {
   @apply grow;
 }
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-50%);
+  }
+}

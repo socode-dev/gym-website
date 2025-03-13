@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
-import Home from "../pages/HomePage/Home";
+import Home from "../pages/home/Home";
 import About from "../pages/About";
-import Services from "../pages/Services";
+import Services from "../pages/services/Services";
 import Membership from "../pages/Membership";
 import Trainers from "../pages/Trainers";
 import Contact from "../pages/Contact";

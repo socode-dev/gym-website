@@ -1,12 +1,8 @@
 import { useEffect } from "react";
-import WelcomeSec from "./components/WelcomeSec";
+import WelcomeSec from "./WelcomeSec";
 import HomeBG from "../../assets/home_PNGs/home_bg.jpeg";
-import WhatWeOffer from "./components/Offer";
-import Receptionist from "../../assets/home_PNGs/receptionist.jpeg";
-import WorkoutOptions from "./components/WorkoutOpt";
-import Strength from "../../assets/home_PNGs/strength.jpg";
-import Cardio from "../../assets/home_PNGs/cardio.jpg";
-import Yoga from "../../assets/home_PNGs/yoga.jpeg";
+import WhatWeOffer from "./offers/OfferList";
+import WorkoutOptions from "./WorkoutOpt";
 
 const Home = ({ homeBGImage, setHomeBGImage }) => {
   useEffect(() => {
@@ -23,8 +19,8 @@ const Home = ({ homeBGImage, setHomeBGImage }) => {
   return (
     <main className="flex flex-col w-full min-h-svh bg-inherit">
       <WelcomeSec customBG={customBG} />
-      <WhatWeOffer Receptionist={Receptionist} />
-      <WorkoutOptions Strength={Strength} Cardio={Cardio} Yoga={Yoga} />
+      <WhatWeOffer />
+      <WorkoutOptions />
     </main>
   );
 };
