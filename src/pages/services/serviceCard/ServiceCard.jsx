@@ -37,10 +37,10 @@ const ServiceCard = () => {
               {service.ctaHeading}
             </p>
             <div className="flex gap-x-2.5 mt-2.5 self-center">
-              <Button buttonText={service.ctaButton} navigation="membership" />
+              <Button buttonText={service.ctaButton} navigation="/membership" />
               <Button
                 buttonText="Try for Free"
-                navigation="signup?plan=free-trial"
+                navigation="/membership/signup?plan=free-trial"
               />
             </div>
           </div>

@@ -1,12 +1,15 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   @apply w-full flex h-full m-0;
 }
 
 #root {
-  @apply grow;
+  @apply min-h-svh grow;
 }
 
 .animate-scroll {
@@ -22,4 +25,23 @@ body {
   to {
     transform: translate(-50%);
   }
+}
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+  opacity: 1 !important;
+}
+.swiper-scrollbar {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+.swiper-scrollbar-drag {
+  background: white !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: white !important;
+  font-size: 25px !important;
 }

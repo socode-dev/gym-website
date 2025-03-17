@@ -41,7 +41,7 @@ const Header = ({ menuOpen, setMenuOpen }) => {
       <nav
         id="mobileMenu"
         onClick={toggleMenu}
-        aria-label="mobile-screen"
+        aria-label="mobile-navigation"
         className={`w-full flex flex-col font-[Montserrat] gap-5 absolute top-0 h-screen z-50 bg-inherit py-4 px-4 lg:hidden transition-all duration-300 ease-in-out transform ${
           menuOpen
             ? "visible opacity-100 scale-100 translate-y-0"

@@ -27,9 +27,9 @@ const Testimonials = () => {
         ref={sliderRef}
         className="w-full absolute flex space-x-6 animate-scroll"
       >
-        {[...testimonials, ...testimonials].map((testimonial) => (
+        {[...testimonials, ...testimonials].map((testimonial, index) => (
           <div
-            key={testimonial.id}
+            key={index + 1}
             className="bg-neutral-900 w-3xs p-3 rounded-lg shadow-lg shrink-0"
           >
             <img

@@ -1,6 +1,6 @@
-import Strength from "../../assets/home_PNGs/strength.jpg";
-import Cardio from "../../assets/home_PNGs/cardio.jpg";
-import Yoga from "../../assets/home_PNGs/yoga.jpeg";
+import Strength from "../../assets/home/strength.jpg";
+import Cardio from "../../assets/home/cardio.jpg";
+import Yoga from "../../assets/home/yoga.jpeg";
 
 const WorkoutOptions = () => {
   return (

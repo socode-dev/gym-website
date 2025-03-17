@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import WelcomeSec from "./WelcomeSec";
-import HomeBG from "../../assets/home_PNGs/home_bg.jpeg";
+import HomeBG from "../../assets/home/home_bg.jpeg";
 import WhatWeOffer from "./offers/OfferList";
 import WorkoutOptions from "./WorkoutOpt";
 
@@ -18,7 +18,7 @@ const Home = ({ homeBGImage, setHomeBGImage }) => {
 
   return (
     <main className="flex flex-col w-full min-h-svh bg-inherit">
-      <WelcomeSec customBG={customBG} />
+      <WelcomeSec customBG={customBG} id="home" />
       <WhatWeOffer />
       <WorkoutOptions />
     </main>

@@ -18,7 +18,10 @@ const Services = () => {
       </div>
       <ServiceCard />
       <FreeTrial />
-      <Button buttonText="Claim Your Free Trial" />
+      <Button
+        buttonText="Claim Your Free Trial"
+        navigation="/membership/signup?plan=free-trial"
+      />
       <Testimonials />
 
       <h4 className="text-white text-xl text-center font-bold font-[Raleway] mt-10">
@@ -27,7 +30,7 @@ const Services = () => {
       <p className="text-gray-200 text-sm text-center italic font-[Montserrat] my-4">
         Find the right program for you and start your journey today!
       </p>
-      <Button buttonText="See All Training Programs" navigation="membership" />
+      <Button buttonText="See All Training Programs" navigation="/membership" />
     </main>
   );
 };

@@ -1,6 +1,6 @@
 import Button from "../../../components/Button";
 import offerData from "./offerData";
-import Receptionist from "../../../assets/home_PNGs/receptionist.jpeg";
+import Receptionist from "../../../assets/home/receptionist.jpeg";
 
 const WhatWeOffer = () => {
   return (

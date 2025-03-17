@@ -1,5 +1,5 @@
-import Timeline from "../assets/about_PNGs/timeline.jpg";
-import GroupClass from "../assets/about_PNGs/group_class.jpg";
+import Timeline from "../assets/about/timeline.jpg";
+import GroupClass from "../assets/about/group_class.jpg";
 import Button from "../components/Button";
 
 const About = () => {
@@ -23,8 +23,8 @@ const About = () => {
         <img src={Timeline} alt="History Timeline Image" className="w-full" />
       </div>
 
-      <div className="w-full md:h-70 flex flex-col gap-y-5 md:flex-row">
-        <div className="w-full md:w-1/2 flex flex-col p-5">
+      <div className="w-full md:h-90 flex flex-col gap-y-5 md:flex-row mt-10">
+        <div className="w-full md:w-1/2 flex flex-col  justify-center p-5">
           <h3 className="text-2xl text-white text-center font-extrabold font-[Raleway]">
             Our Mission and Vision
           </h3>
@@ -43,9 +43,9 @@ const About = () => {
             Results-driven. Innovative. Inclusive. This is Xtremefit.
           </p>
           <Button
-            buttonText="Meet Our Trainers"
+            buttonText="Explore Memberships"
             buttonWidth="w-fit"
-            navigation="trainers"
+            navigation="/membership"
           />
         </div>
 
