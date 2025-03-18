@@ -13,7 +13,7 @@ const FAQs = () => {
 
   return (
     <section className="p-4 w-full flex flex-col items-center space-y-5">
-      <h3 className="text-3xl text-center text-white font-bold font-[Raleway]">
+      <h3 className="text-3xl text-center text-white font-bold font-raleway">
         ❓ Frequently Asked Questions
       </h3>
 
@@ -25,12 +25,12 @@ const FAQs = () => {
           >
             <div
               onClick={() => toggleFaq(faq.id)}
-              className="bg-neutral-900 flex cursor-pointer justify-between items-center gap-7 p-2.5 hover:bg-neutral-950 transition duration-200"
+              className="bg-neutral-900 flex cursor-pointer justify-between items-center gap-7 p-2.5 hover:bg-neutral-950 transition duration-300"
             >
-              <span className="w-20 grow text-wrap text-base text-neutral-300 font-[Montserrat]">
+              <span className="w-20 grow text-wrap text-base text-neutral-300 font-montserrat">
                 {faq.question}
               </span>
-              <span className="text-base text-neutral-300">
+              <span className="text-lg text-neutral-300">
                 {openFaq === faq.id ? (
                   <RemoveCircleOutlineTwoToneIcon />
                 ) : (
@@ -46,7 +46,7 @@ const FAQs = () => {
                     : "h-0 opacity-0 "
                 }`}
               >
-                <p className="text-sm text-neutral-300 font-[Montserrat]">
+                <p className="text-base text-neutral-300 font-montserrat">
                   {faq.answer}
                 </p>
               </div>
@@ -54,11 +54,11 @@ const FAQs = () => {
           </div>
         ))}
       </div>
-      <div className="w-full md:w-4/6 text-base inline-flex gap-1 font-[Montserrat] mb-4">
+      <div className="w-full md:w-4/6 text-base inline-flex items-center gap-2 font-montserrat mb-4">
         <p className="text-neutral-200">Still Have Questions?</p>
         <Link
           to="/contact"
-          className="text-red-700 font-bold underline cursor-pointer hover:text-red-900 transition duration-200"
+          className="text-red-600 text-lg font-bold underline cursor-pointer hover:text-red-700 transition duration-200"
         >
           Contact Us
         </Link>

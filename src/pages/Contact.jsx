@@ -28,11 +28,11 @@ const Contact = () => {
 
   return (
     <section className="w-full mx-auto p-6 text-white">
-      <h2 className="text-4xl font-bold font-[Raleway] text-center my-4">
+      <h2 className="text-4xl font-bold font-raleway text-center my-4">
         Contact Us
       </h2>
 
-      <div className="w-full md:w-4/6 lg:w-3/5 text-neutral-400 text-base mt-15 font-[Montserrat] space-y-2.5 mx-auto">
+      <div className="w-full md:w-4/6 lg:w-3/5 text-neutral-400 text-base mt-15 font-montserrat space-y-2.5 mx-auto">
         <p>
           <strong>📍 Location:</strong> 123 Fitness, New York City, New York,
           United States.
@@ -84,7 +84,7 @@ const Contact = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full py-2 px-3 bg-neutral-800 text-white font-[Montserrat] rounded-4xl outline-2 outline-neutral-700 focus:outline-neutral-500 transition duration-200"
+          className="w-full py-2 px-3 bg-neutral-800 text-white font-montserrat rounded-4xl outline-2 outline-neutral-700 focus:outline-neutral-500 transition duration-200"
         />
 
         <input
@@ -95,7 +95,7 @@ const Contact = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full py-2 px-3 bg-neutral-800 text-white font-[Montserrat] rounded-4xl outline-2 outline-neutral-700 focus:outline-neutral-500 transition duration-200"
+          className="w-full py-2 px-3 bg-neutral-800 text-white font-montserrat rounded-4xl outline-2 outline-neutral-700 focus:outline-neutral-500 transition duration-200"
         />
 
         <textarea
@@ -105,19 +105,19 @@ const Contact = () => {
           value={formData.message}
           onChange={handleChange}
           required
-          className="w-full py-2 px-3 bg-neutral-800 text-white font-[Montserrat] rounded-2xl outline-2 outline-neutral-700 focus:outline-neutral-500 transition duration-200 resize-none "
+          className="w-full py-2 px-3 bg-neutral-800 text-white font-montserrat rounded-2xl outline-2 outline-neutral-700 focus:outline-neutral-500 transition duration-200 resize-none "
         />
 
         <button
           type="submit"
-          className="w-full bg-red-700 hover:bg-red-900 transition duration-200 py-2.5 text-center text-base cursor-pointer font-bold font-[Montserrat] rounded-4xl"
+          className="w-full bg-red-600 hover:bg-red-700 transition duration-300 py-2.5 text-center text-lg cursor-pointer font-bold font-montserrat rounded-4xl"
         >
           Send Message
         </button>
       </form>
 
       {successMessage && (
-        <p className="text-green-500 text-base text-center mt-5 font-[Montserrat]">
+        <p className="text-green-500 text-base text-center mt-5 font-montserrat">
           {successMessage}
         </p>
       )}

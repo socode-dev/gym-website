@@ -10,14 +10,14 @@ const ServiceCard = () => {
             key={service.id}
             className="flex flex-col gap-y-2 px-3.5 py-3.5 border-2 border-solid border-neutral-900 bg-neutral-950 shadow-2xl"
           >
-            <h3 className="text-xl text-white text-center font-bold font-[Raleway]">
+            <h3 className="text-xl text-white text-center font-bold font-raleway">
               {service.heading}
             </h3>
-            <p className="text-sm text-gray-200 font-[Montserrat]">
+            <p className="text-sm text-gray-200 font-montserrat">
               {service.about}
             </p>
             <div className="mt-2.5 pl-2.5">
-              <h4 className="text-white text-xl font-bold font-[Raleway]">
+              <h4 className="text-white text-xl font-bold font-raleway">
                 ✅ Benefits:
               </h4>
               <ul className="list-none mt-2.5">
@@ -25,7 +25,7 @@ const ServiceCard = () => {
                   return (
                     <li
                       key={index + 1}
-                      className="text-gray-200 text-sm font-[Montserrat]"
+                      className="text-gray-200 text-sm font-montserrat"
                     >
                       {benefit}
                     </li>
@@ -33,7 +33,7 @@ const ServiceCard = () => {
                 })}
               </ul>
             </div>
-            <p className="text-gray-200 text-sm italic text-center font-[Montserrat] mt-2.5">
+            <p className="text-gray-200 text-sm italic text-center font-montserrat mt-2.5">
               {service.ctaHeading}
             </p>
             <div className="flex gap-x-2.5 mt-2.5 self-center">

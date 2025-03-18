@@ -37,10 +37,10 @@ const Testimonials = () => {
               alt={testimonial.name}
               className="w-12 h-12 rounded-full mx-auto"
             />
-            <h3 className="text-xl text-white font-bold font-[Raleway] text-center mt-4">
+            <h3 className="text-xl text-white font-bold font-raleway text-center mt-4">
               {testimonial.name}
             </h3>
-            <p className="text-gray-400 text-sm text-center font-[Montserrat] mt-2">
+            <p className="text-gray-400 text-base text-center font-montserrat mt-2">
               {testimonial.review}
             </p>
             <div className="flex justify-center mt-3 text-yellow-400">

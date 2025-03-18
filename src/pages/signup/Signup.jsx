@@ -84,7 +84,7 @@ const SignUp = () => {
 
   return (
     <section className="w-full md:w-4/6 p-6 text-white mx-auto my-10">
-      <h2 className="text-3xl font-bold text-center text-white font-[Raleway]">
+      <h2 className="text-3xl font-bold text-center text-white font-raleway">
         {plan.name}
       </h2>
       <p className="text-center text-xl text-neutral-400 my-4">{plan.price}</p>
@@ -93,7 +93,7 @@ const SignUp = () => {
         <div className="lg:w-3/4 mx-auto">
           <label
             htmlFor="changePlan"
-            className=" block text-lg text-neutral-200 mb-2 font-bold font-[Raleway]"
+            className=" block text-lg text-neutral-200 mb-2 font-bold font-raleway"
           >
             Change Plan:
           </label>
@@ -101,7 +101,7 @@ const SignUp = () => {
             id="changePlan"
             value={selectedPlan}
             onChange={handlePlanChange}
-            className="w-full py-2 px-4 text-base font-[Montserrat] bg-neutral-800 border-2 border-neutral-700 text-neutral-200 rounded-2xl cursor-pointer"
+            className="w-full py-2 px-4 text-base font-montserrat bg-neutral-800 border-2 border-neutral-700 text-neutral-200 rounded-2xl cursor-pointer"
           >
             {Object.keys(plans).map((key) => (
               <option key={key} value={key}>
@@ -115,7 +115,7 @@ const SignUp = () => {
           {plan.features.map((feature, index) => (
             <li
               key={index + 1}
-              className="text-neutral-200 text-base font-[Montserrat]"
+              className="text-neutral-200 text-base font-montserrat"
             >
               ✅ {feature}
             </li>
@@ -123,7 +123,7 @@ const SignUp = () => {
         </ul>
       </div>
 
-      <p className="text-sm italic w-fit mx-auto text-neutral-400 font-[Montserrat] bg-neutral-800 rounded my-8 p-2">
+      <p className="text-sm italic w-fit mx-auto text-neutral-400 font-montserrat bg-neutral-800 rounded my-8 p-2">
         {selectedPlan === "free-trial"
           ? "📝 Membership"
           : "📩 Payment and Membership"}{" "}
@@ -131,7 +131,7 @@ const SignUp = () => {
       </p>
 
       <form
-        className="lg:w-3/4 space-y-4 font-[Montserrat] text-neutral-200 mx-auto my-15"
+        className="lg:w-3/4 space-y-4 font-montserrat text-neutral-200 mx-auto my-15"
         onSubmit={handleSubmit}
       >
         <input
@@ -179,7 +179,7 @@ const SignUp = () => {
         />
         <button
           type="submit"
-          className="w-full text-base font-bold bg-red-700 hover:bg-red-900 transition-all duration-200 py-2.5 rounded-2xl cursor-pointer"
+          className="w-full text-lg font-bold bg-red-600 hover:bg-red-700 transition-all duration-200 py-2.5 rounded-2xl cursor-pointer"
         >
           {selectedPlan === "free-trial" ? "Start Free Trial" : "Sign Up"}
         </button>

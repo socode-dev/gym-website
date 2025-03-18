@@ -10,10 +10,10 @@ const Plan = () => {
 
   return (
     <section className="w-full flex flex-col items-center px-2.5 space-y-5">
-      <h3 className="text-2xl text-center text-white font-[Raleway] font-bold">
+      <h3 className="text-2xl text-center text-white font-raleway font-bold">
         Choose Your Membership Plan
       </h3>
-      <p className="text-center text-base text-neutral-300 font-[Montserrat]">
+      <p className="text-center text-base text-neutral-300 font-montserrat">
         Flexible plans designed to match your fitness goal. Choose your path and
         start today!
       </p>
@@ -25,16 +25,16 @@ const Plan = () => {
               className={`w-70 px-2.5 py-4 space-y-6 flex flex-col items-center ${plan.bgColor} border-2 border-solid ${plan.border} shadow-lg rounded-lg shadow-neutral-950`}
             >
               {plan.popular && (
-                <span className="text-sm text-center text-neutral-400 font-[Montserrat] italic">
+                <span className="text-base text-center text-neutral-300 font-montserrat italic">
                   🔥 Most Popular Choice!
                 </span>
               )}
               {plan.best && (
-                <span className="text-sm text-center text-neutral-400 font-[Montserrat] italic">
+                <span className="text-base text-center text-neutral-300 font-montserrat italic">
                   🏆 Best for Serious Athletes!
                 </span>
               )}
-              <h4 className="text-2xl text-center text-white font-bold font-[Raleway]">
+              <h4 className="text-2xl text-center text-white font-bold font-raleway">
                 {plan.name}
               </h4>
               <p className="text-7xl text-center text-neutral-400 ">{`$${plan.price}`}</p>
@@ -42,7 +42,7 @@ const Plan = () => {
                 {plan.features.map((list, index) => (
                   <li
                     key={index + 1}
-                    className="text-base text-neutral-200 font-[Montserrat]"
+                    className="text-base text-neutral-200 font-montserrat"
                   >{`✅ ${list}`}</li>
                 ))}
               </ul>
@@ -51,8 +51,8 @@ const Plan = () => {
                 className={`${
                   plan.popular
                     ? "bg-white text-neutral-950 hover:bg-neutral-400"
-                    : "bg-red-700 text-white hover:bg-red-900"
-                } px-5 py-2.5 rounded-4xl font-bold text-base font-[Montserrat] transition-all duration-200 cursor-pointer`}
+                    : "bg-red-600 text-white hover:bg-red-700"
+                } px-5 py-2.5 rounded-4xl font-bold text-lg font-montserrat transition-all duration-200 cursor-pointer`}
               >
                 Join Now
               </button>

@@ -22,7 +22,7 @@ const membershipPlans = [
       "Personalized workout plan",
       "Monthly progress check-ins with trainers",
     ],
-    bgColor: "bg-red-700",
+    bgColor: "bg-red-600",
     border: "border-red-500",
     popular: true, // Highlight this plan
   },

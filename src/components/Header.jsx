@@ -12,20 +12,20 @@ const Header = ({ menuOpen, setMenuOpen }) => {
   };
 
   return (
-    <header className="w-full bg-inherit flex p-2.5 justify-center items-center font- dark:bg-white border-b-2 border-solid border-b-neutral-950 shadow-neutral-950">
+    <header className="w-full bg-inherit flex p-2.5 justify-center items-center font- dark:bg-white border-b-4 border-solid border-b-neutral-900 shadow-neutral-900">
       <section
         id="desktopMenu"
         className="flex justify-between items-center w-full px-2.5"
       >
         <Link
           to="/"
-          className="text-red-700 font-bold font-[Raleway] text-4xl ml-2.5 md:text-5xl md:ml-5"
+          className="text-red-600 font-bold font-raleway text-4xl md:text-5xl md:ml-5"
         >
           {name}
         </Link>
         <nav
-          className="hidden pr-2.5  lg:flex gap-3 items-center font-[Montserrat]"
-          aria-label="big-screen"
+          className="hidden pr-2.5 lg:flex gap-3 items-center font-montserrat"
+          aria-label="big-scren-navigation"
         >
           <NavLinks flexDirection="flex-row" />
           <Button buttonText="Join Now" navigation="membership" />
@@ -35,20 +35,24 @@ const Header = ({ menuOpen, setMenuOpen }) => {
           className="lg:hidden cursor-pointer"
           onClick={toggleMenu}
         >
-          <MenuTwoToneIcon className="text-white dark:text-black hover:opacity-80" />
+          <MenuTwoToneIcon
+            fontSize="large"
+            className="text-white dark:text-black hover:opacity-80"
+          />
         </div>
       </section>
       <nav
         id="mobileMenu"
         onClick={toggleMenu}
         aria-label="mobile-navigation"
-        className={`w-full flex flex-col font-[Montserrat] gap-5 absolute top-0 h-screen z-50 bg-inherit py-4 px-4 lg:hidden transition-all duration-300 ease-in-out transform ${
+        className={`w-full flex flex-col font-montserrat gap-8 absolute top-0 h-screen z-50 bg-inherit py-4 px-4 lg:hidden transition-all duration-300 ease-in-out transform ${
           menuOpen
             ? "visible opacity-100 scale-100 translate-y-0"
             : "invisible opacity-0 scale-0 -translate-y-full"
         }`}
       >
         <CloseTwoToneIcon
+          fontSize="large"
           className="text-white dark:text-black self-end cursor-pointer hover:opacity-70
         "
         />

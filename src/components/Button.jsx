@@ -6,7 +6,7 @@ const Button = ({ buttonText, buttonWidth, buttonAlign, navigation }) => {
   return (
     <button
       onClick={() => navigate(`${navigation}`)}
-      className={`${buttonWidth} ${buttonAlign} bg-red-700 font-[Montserrat] px-4 py-2 text-sm text-white cursor-pointer transition-all hover:bg-red-800 shadow-sm shadow-red-600 font-bold rounded-4xl`}
+      className={`${buttonWidth} ${buttonAlign} bg-red-600 font-montserrat px-4 py-2 text-lg text-white cursor-pointer transition duration-200 hover:bg-red-700 shadow-lg font-bold rounded-4xl`}
     >
       {buttonText}
     </button>
