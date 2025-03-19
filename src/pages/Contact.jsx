@@ -90,7 +90,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full py-2 px-3 bg-neutral-800 text-white font-montserrat rounded-4xl outline-2 outline-neutral-700 focus:outline-neutral-500 transition duration-200"
+          className="w-full py-2 px-3 bg-neutral-800 text-white font-montserrat rounded-3xl outline-2 outline-neutral-700 focus:outline-neutral-500 transition duration-200"
         />
 
         <input
@@ -101,7 +101,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full py-2 px-3 bg-neutral-800 text-white font-montserrat rounded-4xl outline-2 outline-neutral-700 focus:outline-neutral-500 transition duration-200"
+          className="w-full py-2 px-3 bg-neutral-800 text-white font-montserrat rounded-3xl outline-2 outline-neutral-700 focus:outline-neutral-500 transition duration-200"
         />
 
         <textarea
@@ -111,12 +111,12 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           value={formData.message}
           onChange={handleChange}
           required
-          className="w-full py-2 px-3 bg-neutral-800 text-white font-montserrat rounded-2xl outline-2 outline-neutral-700 focus:outline-neutral-500 transition duration-200 resize-none "
+          className="w-full py-2 px-3 bg-neutral-800 text-white font-montserrat rounded-3xl outline-2 outline-neutral-700 focus:outline-neutral-500 transition duration-200 resize-none "
         />
 
         <button
           type="submit"
-          className="w-full bg-red-600 hover:bg-red-700 transition duration-300 py-2.5 text-center text-lg cursor-pointer font-bold font-montserrat rounded-4xl"
+          className="w-full bg-red-600 hover:bg-red-700 transition duration-300 py-2.5 text-center text-lg cursor-pointer font-bold font-montserrat rounded-3xl"
         >
           Send Message
         </button>
@@ -134,7 +134,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           src={gymLocation}
           allowFullScreen=""
           loading="lazy"
-          className="w-full h-60 rounded-lg"
+          className="w-full h-60 rounded-3xl"
         ></iframe>
       </div>
     </section>

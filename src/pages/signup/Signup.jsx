@@ -101,7 +101,7 @@ const SignUp = () => {
             id="changePlan"
             value={selectedPlan}
             onChange={handlePlanChange}
-            className="w-full py-2 px-4 text-base font-montserrat bg-neutral-800 border-2 border-neutral-700 text-neutral-200 rounded-2xl cursor-pointer"
+            className="w-full py-2 px-4 text-base font-montserrat bg-neutral-800 border-2 border-neutral-700 text-neutral-200 rounded-3xl cursor-pointer"
           >
             {Object.keys(plans).map((key) => (
               <option key={key} value={key}>
@@ -142,7 +142,7 @@ const SignUp = () => {
           autoComplete="fullName"
           required
           onChange={handleChange}
-          className="w-full px-3 py-2 border-2 border-neutral-700 bg-neutral-800 rounded-2xl focus:outline-2 focus:outline-neutral-500"
+          className="w-full px-3 py-2 border-2 border-neutral-700 bg-neutral-800 rounded-3xl focus:outline-2 focus:outline-neutral-500"
         />
 
         <input
@@ -153,7 +153,7 @@ const SignUp = () => {
           autoComplete="email"
           required
           onChange={handleChange}
-          className="w-full px-3 py-2 border-2 border-neutral-700 bg-neutral-800 rounded-2xl focus:outline-2 focus:outline-neutral-500"
+          className="w-full px-3 py-2 border-2 border-neutral-700 bg-neutral-800 rounded-3xl focus:outline-2 focus:outline-neutral-500"
         />
 
         <input
@@ -164,7 +164,7 @@ const SignUp = () => {
           autoComplete="password"
           required
           onChange={handleChange}
-          className="w-full px-3 py-2 border-2 border-neutral-700 bg-neutral-800 rounded-2xl focus:outline-2 focus:outline-neutral-500"
+          className="w-full px-3 py-2 border-2 border-neutral-700 bg-neutral-800 rounded-3xl focus:outline-2 focus:outline-neutral-500"
         />
 
         <input
@@ -175,11 +175,11 @@ const SignUp = () => {
           autoComplete="confirmPassword"
           required
           onChange={handleChange}
-          className="w-full px-3 py-2 border-2 border-neutral-700 bg-neutral-800 rounded-2xl focus:outline-2 focus:outline-neutral-500"
+          className="w-full px-3 py-2 border-2 border-neutral-700 bg-neutral-800 rounded-3xl focus:outline-2 focus:outline-neutral-500"
         />
         <button
           type="submit"
-          className="w-full text-lg font-bold bg-red-600 hover:bg-red-700 transition-all duration-200 py-2.5 rounded-2xl cursor-pointer"
+          className="w-full text-lg font-bold bg-red-600 hover:bg-red-700 transition-all duration-200 py-2.5 rounded-3xl cursor-pointer"
         >
           {selectedPlan === "free-trial" ? "Start Free Trial" : "Sign Up"}
         </button>

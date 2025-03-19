@@ -4,7 +4,7 @@ const WelcomeSec = ({ customBG }) => {
   return (
     <section className=" relative w-full min-h-svh flex justify-center items-center px-5">
       <div
-        className="absolute inset-0 bg-inherit bg-cover bg-center bg-no-repeat brightness-40"
+        className="absolute inset-0 bg-inherit bg-cover bg-center bg-no-repeat brightness-50"
         style={customBG}
       ></div>
       <div className="relative z-10 max-w-3xl w-full text-center flex flex-col items-center space-y-5  p-4 border-none">

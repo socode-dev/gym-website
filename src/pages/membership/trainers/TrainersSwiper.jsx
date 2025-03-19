@@ -8,7 +8,7 @@ import trainers from "./trainerData";
 const TrainersSwiper = () => {
   return (
     <div
-      className="max-w-fit h-auto md:w-4/6 relative
+      className="max-w-fit h-80 md:w-4/6 relative
      space-y-15 flex justify-center items-center mt-5"
     >
       <Swiper
@@ -25,7 +25,7 @@ const TrainersSwiper = () => {
       >
         {trainers.map((trainer) => (
           <SwiperSlide key={trainer.id}>
-            <div className="p-4 bg-neutral-900 w-50 mx-auto space-y-2 rounded-lg shadow-md border-2 border-neutral-800 transition-all duration-300 transform hover:scale-90 hover:shadow-lg">
+            <div className="p-4 bg-neutral-900 w-52 mx-auto space-y-2 rounded-lg shadow-md border-2 border-neutral-800 transition-all duration-300 transform hover:scale-90 hover:shadow-lg">
               <img
                 src={trainer.image}
                 alt={trainer.name}

@@ -30,7 +30,7 @@ const Testimonials = () => {
         {[...testimonials, ...testimonials].map((testimonial, index) => (
           <div
             key={index + 1}
-            className="bg-neutral-900 w-3xs p-3 rounded-lg shadow-lg shrink-0"
+            className="bg-neutral-900 w-72 p-3 rounded-3xl shadow-lg shrink-0"
           >
             <img
               src={testimonial.avatar}
