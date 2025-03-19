@@ -12,7 +12,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
   };
 
   return (
-    <header className="w-full bg-black flex py-2.5 justify-center items-center border-b-4 border-solid border-b-neutral-800 shadow-lg shadow-neutral-700">
+    <header className="w-full bg-black flex py-2.5 justify-center items-center border-b-4 border-solid border-b-neutral-800 shadow-lg shadow-neutral-800">
       <section
         id="desktopMenu"
         className="flex justify-between items-center w-full pr-4"
@@ -38,7 +38,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
         >
           <MenuTwoToneIcon
             fontSize="large"
-            className="text-white dark:text-black hover:opacity-80"
+            className="text-white hover:opacity-80"
           />
         </div>
       </section>
