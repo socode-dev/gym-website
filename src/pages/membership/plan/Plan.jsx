@@ -17,12 +17,16 @@ const Plan = () => {
         Flexible plans designed to match your fitness goal. Choose your path and
         start today!
       </p>
-      <div className="my-10 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center space-y-8">
+      <div className="py-16 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center space-y-9">
         {membershipPlans.map((plan) => {
           return (
             <div
               key={plan.id}
-              className={`w-72 px-2.5 py-4 space-y-6 flex flex-col items-center ${plan.bgColor} ring-4 ${plan.ring} shadow-lg rounded-3xl shadow-neutral-950`}
+              className={`w-72 px-2.5 ${
+                plan.id === "basic" && "pt-7"
+              } py-4 space-y-6 flex flex-col items-center ${
+                plan.bgColor
+              } ring-4 ${plan.ring} shadow-lg rounded-3xl shadow-neutral-950`}
             >
               {plan.popular && (
                 <span className="text-base text-center text-neutral-300 font-montserrat italic">
