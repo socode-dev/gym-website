@@ -22,7 +22,7 @@ const Plan = () => {
           return (
             <div
               key={plan.id}
-              className={`w-72 px-2.5 py-4 space-y-6 flex flex-col items-center ${plan.bgColor} border-2 border-solid ${plan.border} shadow-lg rounded-3xl shadow-neutral-950`}
+              className={`w-72 px-2.5 py-4 space-y-6 flex flex-col items-center ${plan.bgColor} ring-4 ${plan.ring} shadow-lg rounded-3xl shadow-neutral-950`}
             >
               {plan.popular && (
                 <span className="text-base text-center text-neutral-300 font-montserrat italic">

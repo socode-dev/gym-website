@@ -35,7 +35,7 @@ const ConfirmationModal = ({ plan, fullPlan, email, onClose }) => {
 
         <button
           onClick={onClose}
-          className="mt-6 w-full p-2 bg-red-600 hover:bg-red-700 rounded-3xl text-white text-lg font-bold"
+          className="mt-6 w-full p-2 bg-red-600 hover:bg-red-700 active:bg-red-800 rounded-3xl text-white text-lg font-bold"
         >
           Back to Home Page
         </button>

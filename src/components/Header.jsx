@@ -12,20 +12,16 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
   };
 
   return (
-    <header className="w-full bg-black flex p-2.5 justify-center items-center font- dark:bg-white border-b-4 border-solid border-b-neutral-900 shadow-neutral-900">
+    <header className="w-full bg-black flex py-2.5 justify-center items-center border-b-4 border-solid border-b-neutral-800 shadow-lg shadow-neutral-700">
       <section
         id="desktopMenu"
-        className="flex justify-between items-center w-full pr-2.5"
+        className="flex justify-between items-center w-full pr-4"
       >
         <Link
           to="/"
-          className="flex items-center text-red-600 font-bold font-raleway text-4xl md:text-5xl md:ml-5"
+          className="inline-flex items-center text-red-600 font-bold font-raleway text-4xl md:text-5xl md:ml-5"
         >
-          <img
-            src={DumbbellIcon}
-            alt="dumbbell icon"
-            className="w-20 h-12 ml-0"
-          />
+          <img src={DumbbellIcon} alt="dumbbell icon" className="w-20 h-12" />
           {name}
         </Link>
         <nav

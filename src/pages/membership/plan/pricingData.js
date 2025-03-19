@@ -10,7 +10,7 @@ const membershipPlans = [
       "Free introductory training session",
     ],
     bgColor: "bg-neutral-700",
-    border: "border-neutral-600",
+    ring: "ring-neutral-500",
   },
   {
     id: "pro",
@@ -23,7 +23,7 @@ const membershipPlans = [
       "Monthly progress check-ins with trainers",
     ],
     bgColor: "bg-red-600",
-    border: "border-red-500",
+    ring: "ring-red-400",
     popular: true, // Highlight this plan
   },
   {
@@ -38,7 +38,7 @@ const membershipPlans = [
       "24/7 Gym Access",
     ],
     bgColor: "bg-neutral-800",
-    border: "border-neutral-700",
+    ring: "ring-neutral-600",
     best: true,
   },
 ];

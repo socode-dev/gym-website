@@ -3,12 +3,12 @@ import services from "./services";
 
 const ServiceCard = () => {
   return (
-    <div className="w-full h-auto grid grid-cols-1 md:grid-cols-2 gap-4 my-16 p-4">
+    <div className="w-full h-auto grid grid-cols-1 md:grid-cols-2 gap-10 my-16">
       {services.map((service) => {
         return (
           <div
             key={service.id}
-            className="flex flex-col gap-y-2 px-3.5 py-3.5 border-2 border-solid border-neutral-700 bg-neutral-900 rounded-3xl shadow-2xl"
+            className="flex flex-col gap-y-2 px-3.5 py-3.5 ring-4 ring-neutral-700 bg-neutral-900 rounded-3xl shadow-xl shadow-neutral-800"
           >
             <h3 className="text-xl text-white text-center font-bold font-raleway">
               {service.heading}

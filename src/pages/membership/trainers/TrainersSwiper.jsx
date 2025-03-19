@@ -24,8 +24,8 @@ const TrainersSwiper = () => {
         className="max-w-[350px]"
       >
         {trainers.map((trainer) => (
-          <SwiperSlide key={trainer.id}>
-            <div className="p-4 bg-neutral-900 w-52 mx-auto space-y-2 rounded-lg shadow-md border-2 border-neutral-800 transition-all duration-300 transform hover:scale-90 hover:shadow-lg">
+          <SwiperSlide key={trainer.id} className="">
+            <div className="p-2 bg-neutral-900 w-52 mx-auto my-2 space-y-2 rounded-3xl shadow-md ring-4 ring-neutral-700 transition-all duration-300 transform hover:scale-90 hover:shadow-lg">
               <img
                 src={trainer.image}
                 alt={trainer.name}
