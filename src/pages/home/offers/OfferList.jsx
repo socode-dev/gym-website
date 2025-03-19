@@ -26,7 +26,7 @@ const WhatWeOffer = () => {
         <Button
           buttonText="Explore Our Services"
           buttonWidth="w-fit"
-          navigation="membership"
+          navigation="services"
         />
       </div>
 

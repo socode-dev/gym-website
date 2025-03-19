@@ -4,7 +4,7 @@ import MenuTwoToneIcon from "@mui/icons-material/MenuTwoTone";
 import CloseTwoToneIcon from "@mui/icons-material/CloseTwoTone";
 import Button from "./Button";
 
-const Header = ({ menuOpen, setMenuOpen }) => {
+const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
   const name = "XtremeFit";
 
   const toggleMenu = () => {
@@ -12,15 +12,20 @@ const Header = ({ menuOpen, setMenuOpen }) => {
   };
 
   return (
-    <header className="w-full bg-inherit flex p-2.5 justify-center items-center font- dark:bg-white border-b-4 border-solid border-b-neutral-900 shadow-neutral-900">
+    <header className="w-full bg-black flex p-2.5 justify-center items-center font- dark:bg-white border-b-4 border-solid border-b-neutral-900 shadow-neutral-900">
       <section
         id="desktopMenu"
-        className="flex justify-between items-center w-full px-2.5"
+        className="flex justify-between items-center w-full pr-2.5"
       >
         <Link
           to="/"
-          className="text-red-600 font-bold font-raleway text-4xl md:text-5xl md:ml-5"
+          className="flex items-center text-red-600 font-bold font-raleway text-4xl md:text-5xl md:ml-5"
         >
+          <img
+            src={DumbbellIcon}
+            alt="dumbbell icon"
+            className="w-20 h-12 ml-0"
+          />
           {name}
         </Link>
         <nav
@@ -45,7 +50,7 @@ const Header = ({ menuOpen, setMenuOpen }) => {
         id="mobileMenu"
         onClick={toggleMenu}
         aria-label="mobile-navigation"
-        className={`w-full flex flex-col font-montserrat gap-8 absolute top-0 h-screen z-50 bg-inherit py-4 px-4 lg:hidden transition-all duration-300 ease-in-out transform ${
+        className={`w-full flex flex-col font-montserrat gap-8 absolute top-0 h-svh z-50 bg-inherit py-4 px-4 lg:hidden transition-all duration-300 ease-in-out transform ${
           menuOpen
             ? "visible opacity-100 scale-100 translate-y-0"
             : "invisible opacity-0 scale-0 -translate-y-full"
