@@ -54,7 +54,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
       >
         <CloseTwoToneIcon
           fontSize="large"
-          className="text-white dark:text-black self-end cursor-pointer hover:opacity-70
+          className="text-white self-end cursor-pointer hover:opacity-70
         "
         />
         <NavLinks flexDirection="flex-col" />
