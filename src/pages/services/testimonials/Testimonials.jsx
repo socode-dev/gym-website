@@ -22,25 +22,31 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div className="w-full md:w-4/6 h-80 overflow-hidden relative bg-inherit py-10">
+    <div
+      className="w-full md:w-4/6 h-96 overflow-hidden relative 
+    bg-inherit py-10 my-10"
+    >
+      <h3 className="text-2xl text-center font-bold font-raleway ">
+        Members Experiences at XtremeFit
+      </h3>
       <div
         ref={sliderRef}
-        className="w-full absolute flex space-x-6 animate-scroll"
+        className="w-full absolute flex space-x-6 animate-scroll mt-10"
       >
         {[...testimonials, ...testimonials].map((testimonial, index) => (
           <div
             key={index + 1}
-            className="bg-neutral-900 w-72 p-3 rounded-3xl shadow-lg shrink-0"
+            className="bg-neutral-300 dark:bg-neutral-800 w-72 p-3 rounded-3xl shadow-lg shrink-0"
           >
             <img
               src={testimonial.avatar}
               alt={testimonial.name}
               className="w-12 h-12 rounded-full mx-auto"
             />
-            <h3 className="text-xl text-white font-bold font-raleway text-center mt-4">
+            <h3 className="text-xl font-bold font-raleway text-center mt-4">
               {testimonial.name}
             </h3>
-            <p className="text-gray-400 text-base text-center font-montserrat mt-2">
+            <p className=" text-base text-center font-montserrat mt-2">
               {testimonial.review}
             </p>
             <div className="flex justify-center mt-3 text-yellow-400">

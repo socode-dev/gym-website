@@ -5,12 +5,12 @@ import Testimonials from "./testimonials/Testimonials";
 
 const Services = () => {
   return (
-    <main className="w-full h-auto flex flex-col items-center bg-inherit py-10 px-5">
+    <main className="w-full h-auto flex flex-col items-center bg-inherit text-black dark:text-white py-10 px-5">
       <div className="px-5">
-        <h2 className="text-white text-center text-3xl font-bold font-raleway">
+        <h2 className="text-center text-3xl font-bold font-raleway">
           Train You Way to Greatness
         </h2>
-        <p className="text-base text-gray-200 text-center text-wrap max-w-xl font-montserrat mt-5">
+        <p className="text-base text-center text-wrap max-w-xl font-montserrat mt-5">
           At <strong>XtremeFit</strong>, we offer a variety of training programs
           tailored for strength, endurance, and flexibility. No matter your
           fitness level, we have the perfect workout for you!
@@ -24,10 +24,10 @@ const Services = () => {
       />
       <Testimonials />
 
-      <h4 className="text-white text-xl text-center font-bold font-raleway mt-10">
+      <h4 className=" text-xl text-center font-bold font-raleway mt-10">
         Ready to Transform Your Fitness?
       </h4>
-      <p className="text-gray-200 text-sm text-center italic font-montserrat my-4">
+      <p className=" text-sm text-center italic font-montserrat my-4">
         Find the right program for you and start your journey today!
       </p>
       <Button buttonText="See All Training Programs" navigation="/membership" />

@@ -6,17 +6,17 @@ import FAQs from "./FAQs/FAQs";
 const Membership = () => {
   return (
     <main className="w-full h-auto flex flex-col items-center space-y-10 mb-10">
-      <section className="w-full md:w-5/6 text-center space-y-4 mt-8 px-2.5 border-b-1 border-b-neutral-500 pb-5">
-        <h2 className="text-white text-3xl  font-bold font-raleway">
+      <section className="w-full md:w-5/6 text-black dark:text-white text-center space-y-4 mt-8 px-2.5 border-b-2 border-b-neutral-300 pb-10">
+        <h2 className="text-3xl  font-bold font-raleway">
           Membership Page &mdash; Join XtremeFit
         </h2>
-        <p className="text-neutral-200 text-base font-montserrat mt-10">
+        <p className=" text-base font-montserrat mt-10">
           At <strong>XtremeFit</strong>, we believe fitness should be
           accessible, flexible, and results-driven. Whether you’re a beginner or
           an elite athlete, we offer customized membership plans to match your
           fitness journey.
         </p>
-        <p className="italic font-montserrat  text-base text-neutral-400">
+        <p className="italic font-montserrat  text-base">
           Choose the plan that works best for you and start your transformation
           today!
         </p>
@@ -24,24 +24,20 @@ const Membership = () => {
       <Plan />
 
       <section className="w-full px-2.5 py-5 flex flex-col items-center space-y-5">
-        <h3 className="text-2xl text-white font-bold font-raleway">
+        <h3 className="text-2xl font-bold font-raleway">
           Try for Free – 7-Day Trial
         </h3>
-        <p className="text-base text-neutral-200 font-montserrat text-center">
+        <p className="text-base font-montserrat text-center">
           Not sure which plan is right for you? Get full access for 7 days and
           experience XtremeFit firsthand!
         </p>
 
         <ul className="space-y-1.5">
-          <li className="text-base text-neutral-200 font-montserrat">
-            ✅ Full gym access
-          </li>
-          <li className="text-base text-neutral-200 font-montserrat">
+          <li className="text-base font-montserrat">✅ Full gym access</li>
+          <li className="text-base font-montserrat">
             ✅ Unlimited group classes
           </li>
-          <li className="text-base text-neutral-200 font-montserrat">
-            ✅ No payment required
-          </li>
+          <li className="text-base font-montserrat">✅ No payment required</li>
         </ul>
         <Button
           buttonText="Claim Free Trial"
@@ -52,10 +48,10 @@ const Membership = () => {
       <FAQs />
 
       <section className="w-full text-center space-y-5 px-5">
-        <h3 className="text-xl text-white font-bold font-raleway">
+        <h3 className="text-xl font-bold font-raleway">
           Ready to Get Started?
         </h3>
-        <p className="text-base text-neutral-200 font-montserrat">
+        <p className="text-base font-montserrat">
           Choose your plan and take the first step towards a stronger, healthier
           you!
         </p>

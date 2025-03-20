@@ -16,33 +16,33 @@ const TrainersSwiper = () => {
         spaceBetween={20}
         slidesPerView={1}
         pagination={{ clickable: true, el: ".swiper-pagination" }}
-        navigation
         autoplay={{ delay: 2000, disableOnInteraction: false }}
+        navigation
         loop={true}
         speed={600}
         scrollbar={{ hide: true }}
-        className="max-w-[350px]"
+        className="max-w-[380px]"
       >
         {trainers.map((trainer) => (
           <SwiperSlide key={trainer.id} className="">
-            <div className="p-2 bg-neutral-900 w-52 mx-auto my-2 space-y-2 rounded-3xl shadow-md ring-4 ring-neutral-700 transition-all duration-300 transform hover:scale-90 hover:shadow-lg">
+            <div className="p-2 bg-neutral-200 dark:bg-neutral-900 w-52 mx-auto my-2 space-y-2 rounded-3xl shadow-xl ring-4 ring-neutral-300 dark:ring-neutral-700 transition-all duration-300 transform hover:scale-90 ">
               <img
                 src={trainer.image}
                 alt={trainer.name}
-                className="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-neutral-500"
+                className="w-20 h-20 rounded-full mx-auto mb-4 ring-4 ring-neutral-100 dark:border-neutral-500"
               />
-              <h3 className="text-xl text-white font-bold font-raleway text-center">
+              <h3 className="text-xl font-bold font-raleway text-center">
                 {trainer.name}
               </h3>
-              <p className="`text-base text-center text-neutral-300 font-montserrat">
+              <p className="`text-base text-center font-montserrat">
                 {trainer.specialty}
               </p>
               <div className="w-fit mx-auto relative flex justify-center items-center group">
-                <span className="text-sm text-neutral-300 font-montserrat">
+                <span className="text-s font-montserrat">
                   ⏳ {trainer.experience} years
                 </span>
 
-                <span className="absolute bottom-full mb-2 px-2 py-1 text-xs text-neutral-300 bg-neutral-700 rounded-md opacity-0 group-hover:opacity-100 transition-opacity font-montserrat">
+                <span className="absolute bottom-full mb-2 px-2 py-1 text-xs bg-neutral-300 dark:bg-neutral-700 rounded-md opacity-0 group-hover:opacity-100 transition-opacity font-montserrat">
                   Years of Experience
                 </span>
               </div>

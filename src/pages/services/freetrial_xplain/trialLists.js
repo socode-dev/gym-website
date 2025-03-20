@@ -1,9 +1,26 @@
 const freeTrialXPlain = [
-  "✔ Limited to New Members Only → Free trial is available only for first-time visitors.",
-  "✔ One Free Session Per Person → Users can try only one of the four services.",
-  "✔ Pre-registration Required → Users must sign up in advance to book a free session.",
-  "✔ Trial Availability May Vary → Free trial slots are limited per day and based on class schedules.",
-  "✔ Valid for Group Sessions Only → Free trial excludes personal training but includes group workouts.",
+  {
+    title: "✔ Limited to New Members Only",
+    content: "Free trial is available only for first-time visitors.",
+  },
+  {
+    title: "✔ One Free Session Per Person",
+    content: "Users can try only one of the four services.",
+  },
+  {
+    title: "✔ Pre-registration Required",
+    content: "Users must sign up in advance to book a free session.",
+  },
+  {
+    title: "✔ Trial Availability May Vary",
+    content:
+      "Free trial slots are limited per day and based on class schedules.",
+  },
+  {
+    title: "✔ Valid for Group Sessions Only",
+    content:
+      "Free trial excludes personal training but includes group workouts.",
+  },
 ];
 
 export default freeTrialXPlain;

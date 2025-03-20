@@ -4,12 +4,10 @@ import Button from "../components/Button";
 
 const About = () => {
   return (
-    <article className="w-full h-auto bg-inherit  my-10 flex flex-col">
-      <div className="w-full md:w-3/5 text-center self-center">
-        <h2 className="text-white text-3xl font-bold font-raleway">
-          Our Story
-        </h2>
-        <p className="text-gray-200 text-base font-montserrat px-2.5 mt-7 tracking-wide">
+    <article className="w-full h-auto bg-inherit text-black dark:text-white mt-10 mb-20 flex flex-col">
+      <div className="w-full tablet:w-3/5 text-center self-center">
+        <h2 className="text-3xl font-bold font-raleway">Our Story</h2>
+        <p className="text-base font-montserrat px-3 mt-7 tracking-wide">
           Founded in 2024, XtremeFit was born from a passion for fitness,
           stregth, and community. What started as a vision to empower people to
           take control of their health & push their limits and also to create a
@@ -23,22 +21,22 @@ const About = () => {
         <img src={Timeline} alt="History Timeline Image" className="w-full" />
       </div>
 
-      <div className="w-full md:h-90 flex flex-col gap-y-5 md:flex-row mt-10">
-        <div className="w-full md:w-1/2 flex flex-col  justify-center p-5">
-          <h3 className="text-2xl text-white text-center font-extrabold font-raleway">
+      <div className="w-full tablet:h-[450px] flex flex-col gap-y-5 tablet:flex-row mt-10">
+        <div className="w-full tablet:w-1/2 flex flex-col  justify-center p-5">
+          <h3 className="text-2xl text-center font-extrabold font-raleway">
             Our Mission and Vision
           </h3>
           <ul className="my-5 flex flex-col gap-y-3">
-            <li className="text-base text-gray-200 font-montserrat">
+            <li className="text-base font-montserrat">
               ✅<strong>Mission:</strong> To empower individuals to unlock their
               full potential throut fitness, dedication, and expert guidance.
             </li>
-            <li className="text-base text-gray-200 font-montserrat">
+            <li className="text-base font-montserrat">
               ✅<strong>Vision:</strong> To be the ultimate training hub for
               those who strive for greatness.
             </li>
           </ul>
-          <p className="text-base text-gray-300 font-montserrat text-center mb-5">
+          <p className="text-base font-montserrat text-center mb-5">
             Results-driven. Innovative. Inclusive. This is Xtremefit.
           </p>
           <Button
@@ -48,11 +46,11 @@ const About = () => {
           />
         </div>
 
-        <div className="w-full md:w-1/2 h-full">
+        <div className="w-full tablet:w-1/2 h-full">
           <img
             src={GroupClass}
             alt="Group Fitness Class Image"
-            className="w-full h-full"
+            className="w-full h-full tablet:rounded-l-3xl"
           />
         </div>
       </div>

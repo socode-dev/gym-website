@@ -13,19 +13,21 @@ const ConfirmationModal = ({ plan, fullPlan, email, onClose }) => {
   }, [onClose]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-950 bg-opacity-60">
-      <div className="w-full h-screen flex flex-col justify-between md:h-2/3 md:max-w-1/2 bg-neutral-800 md:rounded-lg shadow-lg p-6 transform transition-allduration-300 opacity-100 scale-100 md:top-1/2 md:left-1/2 ">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center
+    bg-white dark:bg-neutral-950 text-black dark:text-white opacity-100"
+    >
+      <div className="w-full h-screen flex flex-col justify-around md:h-2/3 md:max-w-1/2 dark:bg-neutral-800 md:rounded-lg shadow-lg p-6 transform transition-allduration-300 opacity-100 scale-100 md:top-1/2 md:left-1/2">
         <div>
           <h2 className="text-3xl text-center font-bold font-raleway text-green-500">
             🎉 Signup Successful
           </h2>
-          <p className="text-neutral-300 text-base text-center font-montserrat mt-5">
-            You have successfully signed up for the{" "}
-            <strong className="text-white">{fullPlan}</strong> plan.
+          <p className="text-base text-center font-montserrat mt-5">
+            You have successfully signed up for the <strong>{fullPlan}</strong>{" "}
+            plan.
           </p>
-          <p className="text-neutral-300 text-base text-center font-montserrat mt-4">
-            We've sent an emil to{" "}
-            <strong className="text-white">{email}</strong> with your{" "}
+          <p className="text-base text-center font-montserrat mt-4">
+            We've sent an emil to <strong>{email}</strong> with your{" "}
             {`${
               plan === "free-trial" ? "membership" : "payment and membership"
             }`}{" "}

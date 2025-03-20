@@ -9,8 +9,8 @@ const membershipPlans = [
       "Locker room & shower access",
       "Free introductory training session",
     ],
-    bgColor: "bg-neutral-700",
-    ring: "ring-neutral-500",
+    BGColor: "bg-neutral-600",
+    ring: "ring-neutral-400",
   },
   {
     id: "pro",
@@ -22,7 +22,7 @@ const membershipPlans = [
       "Personalized workout plan",
       "Monthly progress check-ins with trainers",
     ],
-    bgColor: "bg-red-600",
+    BGColor: "bg-red-600",
     ring: "ring-red-400",
     popular: true, // Highlight this plan
   },
@@ -37,8 +37,8 @@ const membershipPlans = [
       "Priority booking for group classes",
       "24/7 Gym Access",
     ],
-    bgColor: "bg-neutral-800",
-    ring: "ring-neutral-600",
+    BGColor: "bg-neutral-700",
+    ring: "ring-neutral-500",
     best: true,
   },
 ];

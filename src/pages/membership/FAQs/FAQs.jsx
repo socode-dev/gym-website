@@ -12,12 +12,12 @@ const FAQs = () => {
   };
 
   return (
-    <section className="p-4 w-full flex flex-col items-center space-y-5">
-      <h3 className="text-3xl text-center text-white font-bold font-raleway">
+    <section className="p-4 w-full text-black dark:text-white flex flex-col items-center space-y-5">
+      <h3 className="text-3xl text-center font-bold font-raleway">
         ❓ Frequently Asked Questions
       </h3>
 
-      <div className="w-full md:w-4/6  rounded-lg overflow-hidden my-10">
+      <div className="w-full md:w-4/6 rounded-3xl overflow-hidden my-10">
         {faqData.map((faq) => (
           <div
             key={faq.id}
@@ -25,12 +25,12 @@ const FAQs = () => {
           >
             <div
               onClick={() => toggleFaq(faq.id)}
-              className="bg-neutral-900 flex cursor-pointer justify-between items-center gap-7 p-2.5 hover:bg-neutral-950 transition duration-300"
+              className="bg-neutral-400 dark:bg-neutral-900 flex cursor-pointer justify-between items-center gap-7 p-2.5 hover:bg-neutral-500 dark:hover:bg-neutral-950 transition duration-300"
             >
-              <span className="w-20 grow text-wrap text-base text-neutral-300 font-montserrat">
+              <span className="w-20 grow text-wrap text-base  font-montserrat">
                 {faq.question}
               </span>
-              <span className="text-lg text-neutral-300">
+              <span className="text-lg ">
                 {openFaq === faq.id ? (
                   <RemoveCircleOutlineTwoToneIcon />
                 ) : (
@@ -40,25 +40,23 @@ const FAQs = () => {
             </div>
             {openFaq === faq.id && (
               <div
-                className={` overflow-hidden bg-neutral-800 p-3 ${
+                className={` overflow-hidden bg-neutral-300 dark:bg-neutral-800 p-3 ${
                   openFaq === faq.id
                     ? "max-h-fit opacity-100 "
                     : "h-0 opacity-0 "
                 }`}
               >
-                <p className="text-base text-neutral-300 font-montserrat">
-                  {faq.answer}
-                </p>
+                <p className="text-base  font-montserrat">{faq.answer}</p>
               </div>
             )}
           </div>
         ))}
       </div>
       <div className="w-full md:w-4/6 text-base inline-flex items-center gap-2 font-montserrat mb-4">
-        <p className="text-neutral-200">Still Have Questions?</p>
+        <p>Still Have Questions?</p>
         <Link
           to="/contact"
-          className="text-red-600 text-lg font-bold underline cursor-pointer hover:text-red-700 transition duration-200"
+          className="text-red-600 text-lg font-bold underline cursor-pointer hover:text-red-700 active:text-red-800 transition duration-200"
         >
           Contact Us
         </Link>

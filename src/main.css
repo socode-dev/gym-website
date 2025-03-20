@@ -31,21 +31,27 @@ body {
   }
 }
 .swiper-pagination-bullet {
-  background: hsla(0, 0%, 60%) !important;
-}
-.swiper-pagination-bullet-active {
-  background-color: hsl(0, 0%, 100%) !important;
-  opacity: 1 !important;
-}
-.swiper-scrollbar {
-  background: rgba(255, 255, 255, 0.2) !important;
-}
-.swiper-scrollbar-drag {
-  background: white !important;
+  background: hsl(0, 0%, 30%) !important;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: hsl(0, 0%, 0%) !important;
+  opacity: 1 !important;
+}
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  color: white !important;
-  font-size: 25px !important;
+  color: hsl(0, 0%, 0%) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .swiper-pagination-bullet {
+    background: hsl(0, 0%, 30%) !important;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: hsl(0, 0%, 100%) !important;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    color: hsl(0, 0%, 100%) !important;
+  }
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import ConfirmationModal from "./ConfirmationModal";
 
@@ -60,6 +60,18 @@ const SignUp = () => {
     confirmPassword: "",
   });
 
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showModal]);
+
   const handlePlanChange = (e) => {
     const newPlan = e.target.value;
     setSelectedPlan(newPlan);
@@ -83,17 +95,17 @@ const SignUp = () => {
   };
 
   return (
-    <section className="w-full md:w-4/6 p-6 text-white mx-auto my-10">
-      <h2 className="text-3xl font-bold text-center text-white font-raleway">
+    <section className="w-full md:w-4/6 p-6 text-dark dark:text-white mx-auto my-10">
+      <h2 className="text-3xl font-bold text-center font-raleway">
         {plan.name}
       </h2>
-      <p className="text-center text-xl text-neutral-400 my-4">{plan.price}</p>
+      <p className="text-center text-xl my-4">{plan.price}</p>
 
       <div className="w-full my-4">
         <div className="lg:w-3/4 mx-auto">
           <label
             htmlFor="changePlan"
-            className=" block text-lg text-neutral-200 mb-2 font-bold font-raleway"
+            className=" block text-lg mb-2 font-bold font-raleway"
           >
             Change Plan:
           </label>
@@ -101,7 +113,7 @@ const SignUp = () => {
             id="changePlan"
             value={selectedPlan}
             onChange={handlePlanChange}
-            className="w-full py-2 px-4 text-base font-montserrat bg-neutral-800 ring-4 ring-neutral-600 text-neutral-200 rounded-3xl cursor-pointer"
+            className="w-full py-2 px-4 text-base font-montserrat font-semibold bg-neutral-300 dark:bg-neutral-800 ring-4 ring-neutral-500 dark:ring-neutral-600 rounded-3xl cursor-pointer"
           >
             {Object.keys(plans).map((key) => (
               <option key={key} value={key}>
@@ -111,19 +123,16 @@ const SignUp = () => {
           </select>
         </div>
 
-        <ul className="my-5 space-y-2.5  mx-auto lg:w-3/4">
+        <ul className="my-5 space-y-3  mx-auto lg:w-3/4">
           {plan.features.map((feature, index) => (
-            <li
-              key={index + 1}
-              className="text-neutral-200 text-base font-montserrat"
-            >
+            <li key={index + 1} className="text-base font-montserrat">
               ✅ {feature}
             </li>
           ))}
         </ul>
       </div>
 
-      <p className="text-sm italic w-fit mx-auto text-neutral-400 font-montserrat bg-neutral-800 rounded my-8 p-2">
+      <p className="text-sm italic w-fit mx-auto font-montserrat bg-neutral-300 dark:bg-neutral-800 rounded my-8 p-2">
         {selectedPlan === "free-trial"
           ? "📝 Membership"
           : "📩 Payment and Membership"}{" "}
@@ -131,7 +140,7 @@ const SignUp = () => {
       </p>
 
       <form
-        className="lg:w-3/4 space-y-4 font-montserrat text-neutral-200 mx-auto my-15"
+        className="lg:w-3/4 space-y-4 font-montserrat mx-auto my-15"
         onSubmit={handleSubmit}
       >
         <input
@@ -142,7 +151,7 @@ const SignUp = () => {
           autoComplete="fullName"
           required
           onChange={handleChange}
-          className="w-full px-3 py-2 ring-4 ring-neutral-600 bg-neutral-800 rounded-3xl focus:outline-2 focus:outline-neutral-500"
+          className="w-full px-3 py-2 bg-neutral-300 dark:bg-neutral-800 ring-4 ring-neutral-500 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
         />
 
         <input
@@ -153,7 +162,7 @@ const SignUp = () => {
           autoComplete="email"
           required
           onChange={handleChange}
-          className="w-full px-3 py-2 ring-4 ring-neutral-600 bg-neutral-800 rounded-3xl focus:outline-2 focus:outline-neutral-500"
+          className="w-full px-3 py-2 bg-neutral-300 dark:bg-neutral-800 ring-4 ring-neutral-500 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
         />
 
         <input
@@ -164,7 +173,7 @@ const SignUp = () => {
           autoComplete="password"
           required
           onChange={handleChange}
-          className="w-full px-3 py-2 ring-4 ring-neutral-600 bg-neutral-800 rounded-3xl focus:outline-2 focus:outline-neutral-500"
+          className="w-full px-3 py-2 bg-neutral-300 dark:bg-neutral-800 ring-4 ring-neutral-500 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
         />
 
         <input
@@ -175,12 +184,12 @@ const SignUp = () => {
           autoComplete="confirmPassword"
           required
           onChange={handleChange}
-          className="w-full px-3 py-2 ring-4 ring-neutral-600 bg-neutral-800 rounded-3xl focus:outline-2 focus:outline-neutral-500"
+          className="w-full px-3 py-2 bg-neutral-300 dark:bg-neutral-800 ring-4 ring-neutral-500 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
         />
         <button
           type="submit"
-          className="w-full text-lg font-bold bg-red-600 hover:bg-red-700
-          active:bg-red-800 transition-all duration-200 py-2.5 rounded-3xl cursor-pointer"
+          className="w-full text-lg text-white font-bold bg-red-600 hover:bg-red-700
+          active:bg-red-800 transition-all duration-200 py-2 rounded-3xl cursor-pointer"
         >
           {selectedPlan === "free-trial" ? "Start Free Trial" : "Sign Up"}
         </button>

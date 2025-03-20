@@ -25,12 +25,12 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
   };
 
   return (
-    <section className="w-full mx-auto p-6 text-white">
+    <section className="w-full mx-auto p-6 text-black dark:text-white">
       <h2 className="text-4xl font-bold font-raleway text-center my-4">
         Contact Us
       </h2>
 
-      <div className="w-full md:w-4/6 lg:w-3/5 text-neutral-400 text-base mt-15 font-montserrat space-y-2.5 mx-auto">
+      <div className="w-full md:w-4/6 lg:w-3/5 text-base mt-15 font-montserrat space-y-2.5 mx-auto">
         <p>
           <strong>
             <LocationOnIcon className="text-red-600 text-xl mr-2" /> Location:
@@ -90,7 +90,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full py-2 px-3 bg-neutral-800 text-white font-montserrat rounded-3xl ring-4 ring-neutral-600 focus:ring-neutral-500 transition duration-200"
+          className="w-full py-2 px-3 bg-neutral-300 dark:bg-neutral-800 text-white font-montserrat rounded-3xl ring-4 ring-neutral-400 dark:ring-neutral-600 focus:outline-none focus:ring-neutral-500 transition duration-200"
         />
 
         <input
@@ -101,7 +101,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full py-2 px-3 bg-neutral-800 text-white font-montserrat rounded-3xl ring-4 ring-neutral-600 focus:ring-neutral-500 transition duration-200"
+          className="w-full py-2 px-3 bg-neutral-300 dark:bg-neutral-800 text-white font-montserrat rounded-3xl ring-4 ring-neutral-400 dark:ring-neutral-600 focus:outline-none focus:ring-neutral-500 transition duration-200"
         />
 
         <textarea
@@ -111,12 +111,12 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           value={formData.message}
           onChange={handleChange}
           required
-          className="w-full py-2 px-3 bg-neutral-800 text-white font-montserrat rounded-3xl ring-4 ring-neutral-600 focus:ring-neutral-500 transition duration-200 resize-none "
+          className="w-full py-2 px-3 bg-neutral-300 dark:bg-neutral-800 text-white font-montserrat rounded-3xl ring-4 ring-neutral-400 dark:ring-neutral-600 focus:outline-none focus:ring-neutral-500 transition duration-200 resize-none "
         />
 
         <button
           type="submit"
-          className="w-full bg-red-600 hover:bg-red-700 active:bg-red-800 transition duration-300 py-2.5 text-center text-lg cursor-pointer font-bold font-montserrat rounded-3xl"
+          className="w-full bg-red-600 text-white hover:bg-red-700 active:bg-red-800 transition duration-300 py-2.5 text-center text-lg cursor-pointer font-bold font-montserrat rounded-3xl"
         >
           Send Message
         </button>
@@ -134,7 +134,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           src={gymLocation}
           allowFullScreen=""
           loading="lazy"
-          className="w-full h-60 rounded-3xl"
+          className="w-full h-60 rounded-3xl shadow-lg shadow-neutral-400"
         ></iframe>
       </div>
     </section>

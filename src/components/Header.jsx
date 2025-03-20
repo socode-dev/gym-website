@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import NavLinks from "./Nav";
 import MenuTwoToneIcon from "@mui/icons-material/MenuTwoTone";
@@ -7,15 +8,27 @@ import Button from "./Button";
 const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
   const name = "XtremeFit";
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
+
   const toggleMenu = () => {
     setMenuOpen((p) => !p);
   };
 
   return (
-    <header className="w-full bg-black flex py-2.5 justify-center items-center border-b-4 border-solid border-b-neutral-800 shadow-lg shadow-neutral-900">
+    <header className="w-full bg-white dark:bg-black flex py-2.5 justify-center items-center border-b-4 border-solid border-b-neutral-300 dark:border-b-neutral-800 shadow-lg">
       <section
         id="desktopMenu"
-        className="flex justify-between items-center w-full pr-4"
+        className="flex justify-between items-center w-full"
       >
         <Link
           to="/"
@@ -25,7 +38,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
           {name}
         </Link>
         <nav
-          className="hidden pr-2.5 lg:flex gap-3 items-center font-montserrat"
+          className="hidden pr-2.5 lg:flex gap-1 items-center font-montserrat"
           aria-label="big-scren-navigation"
         >
           <NavLinks flexDirection="flex-row" />
@@ -33,12 +46,12 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
         </nav>
         <div
           id="hamburger"
-          className="lg:hidden cursor-pointer"
+          className="lg:hidden cursor-pointer mr-5"
           onClick={toggleMenu}
         >
           <MenuTwoToneIcon
             fontSize="large"
-            className="text-white hover:opacity-80"
+            className="text-black dark:text-white hover:opacity-70"
           />
         </div>
       </section>
@@ -46,7 +59,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
         id="mobileMenu"
         onClick={toggleMenu}
         aria-label="mobile-navigation"
-        className={`w-full flex flex-col font-montserrat gap-8 absolute top-0 h-svh z-50 bg-inherit py-4 px-4 lg:hidden transition-all duration-300 ease-in-out transform ${
+        className={`w-full flex flex-col font-montserrat gap-8 fixed top-0 h-svh z-50 bg-inherit py-4 px-4 lg:hidden transition-all duration-300 ease-in-out transform ${
           menuOpen
             ? "visible opacity-100 scale-100 translate-y-0"
             : "invisible opacity-0 scale-0 -translate-y-full"
@@ -54,14 +67,14 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
       >
         <CloseTwoToneIcon
           fontSize="large"
-          className="text-white self-end cursor-pointer hover:opacity-70
+          className="text-black dark:text-white self-end cursor-pointer hover:opacity-70
         "
         />
         <NavLinks flexDirection="flex-col" />
-        <hr className="w-full text-gray-400" />
+        <hr className="w-full border-2  border-neutral-600 dark:border-neutral-500" />
         <Button
           buttonText="Join Now"
-          buttonWidth="w-3xs"
+          buttonWidth="w-full"
           buttonAlign="self-center"
           navigation="membership"
         />

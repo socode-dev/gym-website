@@ -19,7 +19,7 @@ const App = () => {
   const [homeBGImage, setHomeBGImage] = useState("");
 
   return (
-    <div className="min-h-screen flex flex-col w-full bg-black">
+    <div className="min-h-screen flex flex-col w-full bg-white dark:bg-black text-black dark:text-white">
       <Header
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
