@@ -3,7 +3,7 @@ import freeTrialXPlain from "./trialLists";
 const FreeTrial = () => {
   return (
     <div className="px-5 flex flex-col items-center mb-7">
-      <h3 className="text-xl text-center font-bold font-raleway">
+      <h3 className="text-2xl text-center font-bold font-raleway">
         How the Free Trial Works
       </h3>
       <ul className="space-y-2.5 mt-5">

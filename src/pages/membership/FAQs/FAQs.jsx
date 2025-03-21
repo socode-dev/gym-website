@@ -21,11 +21,11 @@ const FAQs = () => {
         {faqData.map((faq) => (
           <div
             key={faq.id}
-            className="border-b-2 w-full border-b-neutral-700  last-of-type:border-none"
+            className="border-b-2 w-full border-b-neutral-400 dark:border-b-neutral-700  last-of-type:border-none"
           >
             <div
               onClick={() => toggleFaq(faq.id)}
-              className="bg-neutral-400 dark:bg-neutral-900 flex cursor-pointer justify-between items-center gap-7 p-2.5 hover:bg-neutral-500 dark:hover:bg-neutral-950 transition duration-300"
+              className="bg-neutral-200 dark:bg-neutral-900 flex cursor-pointer justify-between items-center gap-7 p-2.5 hover:bg-neutral-300 dark:hover:bg-neutral-9500 transition duration-300"
             >
               <span className="w-20 grow text-wrap text-base  font-montserrat">
                 {faq.question}
@@ -40,7 +40,7 @@ const FAQs = () => {
             </div>
             {openFaq === faq.id && (
               <div
-                className={` overflow-hidden bg-neutral-300 dark:bg-neutral-800 p-3 ${
+                className={` overflow-hidden bg-neutral-100 dark:bg-neutral-800 p-3 ${
                   openFaq === faq.id
                     ? "max-h-fit opacity-100 "
                     : "h-0 opacity-0 "

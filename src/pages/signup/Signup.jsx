@@ -113,7 +113,7 @@ const SignUp = () => {
             id="changePlan"
             value={selectedPlan}
             onChange={handlePlanChange}
-            className="w-full py-2 px-4 text-base font-montserrat font-semibold bg-neutral-300 dark:bg-neutral-800 ring-4 ring-neutral-500 dark:ring-neutral-600 rounded-3xl cursor-pointer"
+            className="w-full py-2 px-4 text-base font-montserrat font-semibold bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 rounded-3xl cursor-pointer"
           >
             {Object.keys(plans).map((key) => (
               <option key={key} value={key}>
@@ -132,7 +132,7 @@ const SignUp = () => {
         </ul>
       </div>
 
-      <p className="text-sm italic w-fit mx-auto font-montserrat bg-neutral-300 dark:bg-neutral-800 rounded my-8 p-2">
+      <p className="text-sm italic w-fit mx-auto font-montserrat bg-neutral-200 dark:bg-neutral-800 rounded my-8 p-2">
         {selectedPlan === "free-trial"
           ? "📝 Membership"
           : "📩 Payment and Membership"}{" "}
@@ -140,7 +140,7 @@ const SignUp = () => {
       </p>
 
       <form
-        className="lg:w-3/4 space-y-4 font-montserrat mx-auto my-15"
+        className="lg:w-3/4 h-auto space-y-6 font-montserrat mx-auto my-15"
         onSubmit={handleSubmit}
       >
         <input
@@ -151,7 +151,7 @@ const SignUp = () => {
           autoComplete="fullName"
           required
           onChange={handleChange}
-          className="w-full px-3 py-2 bg-neutral-300 dark:bg-neutral-800 ring-4 ring-neutral-500 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
+          className="w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
         />
 
         <input
@@ -162,7 +162,7 @@ const SignUp = () => {
           autoComplete="email"
           required
           onChange={handleChange}
-          className="w-full px-3 py-2 bg-neutral-300 dark:bg-neutral-800 ring-4 ring-neutral-500 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
+          className="w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
         />
 
         <input
@@ -173,7 +173,7 @@ const SignUp = () => {
           autoComplete="password"
           required
           onChange={handleChange}
-          className="w-full px-3 py-2 bg-neutral-300 dark:bg-neutral-800 ring-4 ring-neutral-500 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
+          className="w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
         />
 
         <input
@@ -184,7 +184,7 @@ const SignUp = () => {
           autoComplete="confirmPassword"
           required
           onChange={handleChange}
-          className="w-full px-3 py-2 bg-neutral-300 dark:bg-neutral-800 ring-4 ring-neutral-500 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
+          className="w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
         />
         <button
           type="submit"

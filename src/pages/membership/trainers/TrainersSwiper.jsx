@@ -25,11 +25,11 @@ const TrainersSwiper = () => {
       >
         {trainers.map((trainer) => (
           <SwiperSlide key={trainer.id} className="">
-            <div className="p-2 bg-neutral-200 dark:bg-neutral-900 w-52 mx-auto my-2 space-y-2 rounded-3xl shadow-xl ring-4 ring-neutral-300 dark:ring-neutral-700 transition-all duration-300 transform hover:scale-90 ">
+            <div className="px-2 py-4 bg-neutral-200 dark:bg-neutral-900 w-52 mx-auto my-2 space-y-2 rounded-3xl shadow-xl ring-4 ring-neutral-300 dark:ring-neutral-700">
               <img
                 src={trainer.image}
                 alt={trainer.name}
-                className="w-20 h-20 rounded-full mx-auto mb-4 ring-4 ring-neutral-100 dark:border-neutral-500"
+                className="w-20 h-20 rounded-full mx-auto mb-4 ring-4 ring-neutral-300 dark:ring-neutral-700"
               />
               <h3 className="text-xl font-bold font-raleway text-center">
                 {trainer.name}

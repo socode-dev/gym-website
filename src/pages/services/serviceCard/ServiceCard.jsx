@@ -8,14 +8,14 @@ const ServiceCard = () => {
         return (
           <div
             key={service.id}
-            className="flex flex-col gap-y-2 p-4 ring-4 ring-neutral-400 dark:ring-neutral-700 bg-neutral-300 dark:bg-neutral-900 rounded-3xl shadow-lg shadow-neutral-800"
+            className="flex flex-col gap-y-3 px-4 py-6 ring-4 ring-neutral-300 dark:ring-neutral-700 bg-neutral-200 dark:bg-neutral-900 rounded-3xl shadow-lg shadow-neutral-400"
           >
             <h3 className="text-xl text-center font-bold font-raleway">
               {service.heading}
             </h3>
-            <p className="text-sm font-montserrat">{service.about}</p>
+            <p className="text-base italic font-montserrat">{service.about}</p>
             <div className="mt-3 pl-3">
-              <h4 className=" text-xl font-bold font-raleway">✅ Benefits:</h4>
+              <h4 className=" text-lg font-bold font-raleway">✅ Benefits:</h4>
               <ul className="list-none mt-3">
                 {service.benefits.map((benefit, index) => {
                   return (
@@ -29,7 +29,7 @@ const ServiceCard = () => {
             <p className="text-sm italic text-center font-montserrat mt-3">
               {service.ctaHeading}
             </p>
-            <div className="flex gap-x-3 mt-3 self-center">
+            <div className="flex gap-x-5 mt-3 self-center">
               <Button buttonText={service.ctaButton} navigation="/membership" />
               <Button
                 buttonText="Try for Free"

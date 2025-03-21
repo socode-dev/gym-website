@@ -5,7 +5,7 @@ import Testimonials from "./testimonials/Testimonials";
 
 const Services = () => {
   return (
-    <main className="w-full h-auto flex flex-col items-center bg-inherit text-black dark:text-white py-10 px-5">
+    <main className="w-full h-auto flex flex-col items-center bg-inherit text-black dark:text-white py-10 px-5 space-y-15">
       <div className="px-5">
         <h2 className="text-center text-3xl font-bold font-raleway">
           Train You Way to Greatness

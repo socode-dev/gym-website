@@ -10,7 +10,7 @@ const services = [
       "✔ Train with elite equipment including free weights, resistance machines, and Olympic platforms.",
     ],
     ctaHeading: "Train like an athlete. Lift like a champion!",
-    ctaButton: "Explore Training",
+    ctaButton: "Lift Now",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const services = [
       "✔ Engage in fun, fast-paced exercises using treadmills, cycling, battle ropes, and bodyweight movements.",
     ],
     ctaHeading: "Push your limits. Feel the burn.",
-    ctaButton: "Join a HIIT Session",
+    ctaButton: "HIIT Now",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const services = [
       "✔ Reduce stress & increase focus with guided yoga sequences.",
     ],
     ctaHeading: "Move better. Feel better. Live better.",
-    ctaButton: "Try a Yoga Class",
+    ctaButton: "Flow Now",
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const services = [
       "✔ Increase agility & flexibility through dynamic, full-body workouts.",
     ],
     ctaHeading: "Train smarter. Move better. Perform stronger.",
-    ctaButton: "Start Training",
+    ctaButton: "Move Better",
   },
 ];
 
