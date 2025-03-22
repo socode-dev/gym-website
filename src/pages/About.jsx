@@ -4,7 +4,7 @@ import Button from "../components/Button";
 
 const About = () => {
   return (
-    <article className="w-full h-auto bg-inherit text-black dark:text-white mt-10 mb-20 flex flex-col">
+    <article className="w-full h-auto bg-inherit text-black dark:text-white mt-10 mb-28 flex flex-col">
       <div className="w-full tablet:w-3/5 text-center self-center">
         <h2 className="text-3xl font-bold font-raleway">Our Story</h2>
         <p className="text-base font-montserrat px-3 mt-7 tracking-wide">
@@ -21,7 +21,7 @@ const About = () => {
         <img src={Timeline} alt="History Timeline Image" className="w-full" />
       </div>
 
-      <div className="w-full tablet:h-[450px] flex flex-col gap-y-5 tablet:flex-row mt-10">
+      <div className="w-full tablet:h-[480px] flex flex-col gap-y-5 tablet:flex-row mt-14">
         <div className="w-full tablet:w-1/2 flex flex-col  justify-center p-5">
           <h3 className="text-2xl text-center font-extrabold font-raleway">
             Our Mission and Vision
@@ -46,11 +46,11 @@ const About = () => {
           />
         </div>
 
-        <div className="w-full tablet:w-1/2 h-full">
+        <div className="w-full tablet:w-1/2 tablet:rounded-l-3xl overflow-hidden h-full shadow-3xl">
           <img
             src={GroupClass}
             alt="Group Fitness Class Image"
-            className="w-full h-full tablet:rounded-l-3xl"
+            className="w-full h-full"
           />
         </div>
       </div>

@@ -5,8 +5,8 @@ import FAQs from "./FAQs/FAQs";
 
 const Membership = () => {
   return (
-    <main className="w-full h-auto flex flex-col items-center space-y-10 mb-10">
-      <section className="w-full md:w-5/6 text-black dark:text-white text-center space-y-4 mt-8 px-2.5 border-b-2 border-b-neutral-300 pb-10">
+    <main className="w-full h-auto flex flex-col items-center space-y-10 mb-16">
+      <section className="w-full tablet:w-5/6 text-black dark:text-white text-center space-y-4 mt-8 px-2.5 border-b-2 border-b-neutral-300 pb-10">
         <h2 className="text-3xl  font-bold font-raleway">
           Membership Page &mdash; Join XtremeFit
         </h2>

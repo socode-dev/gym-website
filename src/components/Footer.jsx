@@ -5,10 +5,7 @@ const Footer = ({ DumbbellIcon, LocationOnIcon, PhoneIcon, EmailIcon }) => {
   const year = new Date().getFullYear();
 
   return (
-    <footer
-      className="w-full h-auto text-black dark:text-white border-t-4 border-solid bg-neutral-100 border-neutral-200
-    shadow-xl shadow-neutral-100 dark:bg-neutral-800 dark:border-t-neutral-700 "
-    >
+    <footer className="w-full h-auto text-black dark:text-white bg-neutral-100 shadow-3xl dark:bg-neutral-800">
       <div className="p-4 lg:flex ">
         <div className="flex flex-col gap-y-4 w-fit ">
           <h2 className="flex items-center text-4xl text-red-600 font-extrabold font-raleway">
@@ -20,7 +17,7 @@ const Footer = ({ DumbbellIcon, LocationOnIcon, PhoneIcon, EmailIcon }) => {
           </p>
         </div>
 
-        <div className="px-5 py-5 w-full h-auto grid grid-cols-1 md:grid-cols-3">
+        <div className="px-5 py-5 w-full h-auto grid grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-3 laptop:px-20 gap-2">
           <div className="flex flex-col items-center gap-y-4 pt-4 w-fit">
             <h3 className="text-2xl font-semibold font-raleway">Quick Links</h3>
 

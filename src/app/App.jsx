@@ -26,7 +26,7 @@ const App = () => {
         DumbbellIcon={DumbbellIcon}
       />
       <ScrollToTop />
-      <main className="grow">
+      <main className="grow pt-16">
         <Routes>
           <Route
             path="/"

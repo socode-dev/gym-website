@@ -17,7 +17,7 @@ const FAQs = () => {
         ❓ Frequently Asked Questions
       </h3>
 
-      <div className="w-full md:w-4/6 rounded-3xl overflow-hidden my-10">
+      <div className="w-full tablet:w-4/6 rounded-3xl overflow-hidden my-10">
         {faqData.map((faq) => (
           <div
             key={faq.id}
@@ -52,7 +52,7 @@ const FAQs = () => {
           </div>
         ))}
       </div>
-      <div className="w-full md:w-4/6 text-base inline-flex items-center gap-2 font-montserrat mb-4">
+      <div className="w-full tablet:w-4/6 text-base inline-flex items-center gap-2 font-montserrat mb-4">
         <p>Still Have Questions?</p>
         <Link
           to="/contact"

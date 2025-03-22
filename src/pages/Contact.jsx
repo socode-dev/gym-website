@@ -30,7 +30,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
         Contact Us
       </h2>
 
-      <div className="w-full md:w-4/6 lg:w-3/5 text-base mt-15 font-montserrat space-y-2.5 mx-auto">
+      <div className="w-full tablet:w-4/6 laptop:w-3/5 text-base mt-15 font-montserrat space-y-3 mx-auto">
         <p>
           <strong>
             <LocationOnIcon className="text-red-600 text-xl mr-2" /> Location:
@@ -80,43 +80,45 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
 
       <form
         onSubmit={handleSubmit}
-        className="space-y-4 w-full md:w-4/6 lg:w-3/5 mx-auto mt-7"
+        className="w-full mobile:w-4/5 tablet:w-3/4 laptop:w-4/6 mx-auto mt-7"
       >
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          autoComplete="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-          className="w-full py-2 px-3 bg-neutral-300 dark:bg-neutral-800 text-white font-montserrat rounded-3xl ring-4 ring-neutral-400 dark:ring-neutral-600 focus:outline-none focus:ring-neutral-500 transition duration-200"
-        />
+        <div className="w-full space-y-5">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            autoComplete="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="w-full py-2 px-3 bg-neutral-200 dark:bg-neutral-800  ring-4 ring-neutral-300 dark:ring-neutral-600 text-white font-montserrat rounded-3xl shadow-3xl focus:outline-none focus:ring-neutral-500 transition duration-200"
+          />
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          autoComplete="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          className="w-full py-2 px-3 bg-neutral-300 dark:bg-neutral-800 text-white font-montserrat rounded-3xl ring-4 ring-neutral-400 dark:ring-neutral-600 focus:outline-none focus:ring-neutral-500 transition duration-200"
-        />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            autoComplete="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full py-2 px-3 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 text-white font-montserrat rounded-3xl shadow-3xl focus:outline-none focus:ring-neutral-500 transition duration-200"
+          />
 
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          rows="6"
-          value={formData.message}
-          onChange={handleChange}
-          required
-          className="w-full py-2 px-3 bg-neutral-300 dark:bg-neutral-800 text-white font-montserrat rounded-3xl ring-4 ring-neutral-400 dark:ring-neutral-600 focus:outline-none focus:ring-neutral-500 transition duration-200 resize-none "
-        />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="8"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            className="w-full py-2 px-3 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 text-white font-montserrat rounded-3xl shadow-3xl focus:outline-none focus:ring-neutral-500 transition duration-200 resize-none "
+          />
+        </div>
 
         <button
           type="submit"
-          className="w-full bg-red-600 text-white hover:bg-red-700 active:bg-red-800 transition duration-300 py-2.5 text-center text-lg cursor-pointer font-bold font-montserrat rounded-3xl"
+          className="mt-10 w-full bg-red-600 text-white hover:bg-red-700 active:bg-red-800 transition duration-300 py-2.5 text-center text-lg cursor-pointer font-bold font-montserrat rounded-3xl"
         >
           Send Message
         </button>
@@ -128,13 +130,13 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
         </p>
       )}
 
-      <div className="my-8 w-full">
+      <div className="my-16 pb-10 w-full">
         <iframe
           title="Gym Location"
           src={gymLocation}
           allowFullScreen=""
           loading="lazy"
-          className="w-full h-60 rounded-3xl shadow-lg shadow-neutral-400"
+          className="w-full h-72 rounded-3xl shadow-3xl "
         ></iframe>
       </div>
     </section>

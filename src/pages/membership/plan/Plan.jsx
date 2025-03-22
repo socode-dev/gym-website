@@ -26,7 +26,7 @@ const Plan = () => {
                 plan.id === "basic" && "pt-7"
               } py-4 space-y-2 flex flex-col items-center ${
                 plan.BGColor
-              } ring-4 ${plan.ring} shadow-lg rounded-3xl shadow-neutral-700`}
+              } ring-4 ${plan.ring} shadow-3xl rounded-3xl`}
             >
               {plan.popular && (
                 <span className="text-base text-center text-neutral-300 font-montserrat italic">

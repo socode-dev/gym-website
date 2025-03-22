@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import NavLinks from "./Nav";
 import MenuTwoToneIcon from "@mui/icons-material/MenuTwoTone";
@@ -6,7 +6,24 @@ import CloseTwoToneIcon from "@mui/icons-material/CloseTwoTone";
 import Button from "./Button";
 
 const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const name = "XtremeFit";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < lastScrollY) {
+        setShowHeader(true);
+      } else {
+        setShowHeader(false);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   useEffect(() => {
     if (menuOpen) {
@@ -25,7 +42,11 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
   };
 
   return (
-    <header className="w-full bg-white dark:bg-black flex py-2.5 justify-center items-center border-b-4 border-solid border-b-neutral-300 dark:border-b-neutral-800 shadow-lg">
+    <header
+      className={`fixed top-0 z-50 w-full bg-white dark:bg-black flex py-2.5 justify-center items-center shadow-3xl transition-transform duration-500 ${
+        showHeader ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <section
         id="desktopMenu"
         className="flex justify-between items-center w-full"
@@ -38,7 +59,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
           {name}
         </Link>
         <nav
-          className="hidden pr-2.5 lg:flex gap-1 items-center font-montserrat"
+          className="hidden pr-2.5 laptop:flex gap-1 items-center font-montserrat"
           aria-label="big-scren-navigation"
         >
           <NavLinks flexDirection="flex-row" />
@@ -46,7 +67,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
         </nav>
         <div
           id="hamburger"
-          className="lg:hidden cursor-pointer mr-5"
+          className="laptop:hidden cursor-pointer mr-5"
           onClick={toggleMenu}
         >
           <MenuTwoToneIcon
@@ -59,7 +80,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
         id="mobileMenu"
         onClick={toggleMenu}
         aria-label="mobile-navigation"
-        className={`w-full flex flex-col font-montserrat gap-8 fixed top-0 h-svh z-50 bg-inherit py-4 px-4 lg:hidden transition-all duration-300 ease-in-out transform ${
+        className={`w-full flex flex-col overflow-auto font-montserrat gap-8 fixed top-0 bottom-0 h-screen z-50 bg-inherit py-3 px-4 lg:hidden transition-all duration-300 ease-in-out transform ${
           menuOpen
             ? "visible opacity-100 scale-100 translate-y-0"
             : "invisible opacity-0 scale-0 -translate-y-full"

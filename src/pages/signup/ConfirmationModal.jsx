@@ -17,7 +17,7 @@ const ConfirmationModal = ({ plan, fullPlan, email, onClose }) => {
       className="fixed inset-0 z-50 flex items-center justify-center
     bg-white dark:bg-neutral-950 text-black dark:text-white opacity-100"
     >
-      <div className="w-full h-screen flex flex-col justify-around md:h-2/3 md:max-w-1/2 dark:bg-neutral-800 md:rounded-lg shadow-lg p-6 transform transition-allduration-300 opacity-100 scale-100 md:top-1/2 md:left-1/2">
+      <div className="w-full h-screen flex flex-col justify-around items-center dark:bg-neutral-800 shadow-lg p-6 transform transition-allduration-300 opacity-100 scale-100">
         <div>
           <h2 className="text-3xl text-center font-bold font-raleway text-green-500">
             🎉 Signup Successful
@@ -37,7 +37,7 @@ const ConfirmationModal = ({ plan, fullPlan, email, onClose }) => {
 
         <button
           onClick={onClose}
-          className="mt-6 w-full p-2 bg-red-600 hover:bg-red-700 active:bg-red-800 rounded-3xl text-white text-lg font-bold"
+          className="mt-6 w-full tablet:w-6/12 p-2 bg-red-600 hover:bg-red-700 active:bg-red-800 rounded-3xl text-white text-lg font-bold"
         >
           Back to Home Page
         </button>

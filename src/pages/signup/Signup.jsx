@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
+import Form from "./Form";
 import ConfirmationModal from "./ConfirmationModal";
 
 const SignUp = () => {
   const [showModal, setShowModal] = useState(false);
+  const [passwordErr, setPasswordErr] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
   const initialPlan = searchParams.get("plan") || "basic";
   const [selectedPlan, setSelectedPlan] = useState(initialPlan);
@@ -84,6 +86,14 @@ const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (formData.password !== formData.confirmPassword) {
+      setPasswordErr("Passwords do not match");
+      return;
+    } else {
+      setPasswordErr("");
+    }
+
     setTimeout(() => {
       setShowModal(true);
     }, 500);
@@ -95,14 +105,14 @@ const SignUp = () => {
   };
 
   return (
-    <section className="w-full md:w-4/6 p-6 text-dark dark:text-white mx-auto my-10">
+    <section className="w-full tablet:w-4/6 p-6 text-dark dark:text-white mx-auto my-10">
       <h2 className="text-3xl font-bold text-center font-raleway">
         {plan.name}
       </h2>
       <p className="text-center text-xl my-4">{plan.price}</p>
 
       <div className="w-full my-4">
-        <div className="lg:w-3/4 mx-auto">
+        <div className="mobile:w-4/5 tablet:w-3/4 mx-auto">
           <label
             htmlFor="changePlan"
             className=" block text-lg mb-2 font-bold font-raleway"
@@ -113,17 +123,17 @@ const SignUp = () => {
             id="changePlan"
             value={selectedPlan}
             onChange={handlePlanChange}
-            className="w-full py-2 px-4 text-base font-montserrat font-semibold bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 rounded-3xl cursor-pointer"
+            className="w-full py-2 px-4 text-base font-montserrat font-semibold bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 shadow-3xl rounded-3xl cursor-pointer"
           >
             {Object.keys(plans).map((key) => (
-              <option key={key} value={key}>
+              <option key={key} value={key} className="mx-auto">
                 {plans[key].name}
               </option>
             ))}
           </select>
         </div>
 
-        <ul className="my-5 space-y-3  mx-auto lg:w-3/4">
+        <ul className="my-5 space-y-3  mx-auto lg:w-3/4 mobile:w-4/5 tablet:w-3/4">
           {plan.features.map((feature, index) => (
             <li key={index + 1} className="text-base font-montserrat">
               ✅ {feature}
@@ -139,61 +149,16 @@ const SignUp = () => {
         details will be sent to your email after signup.
       </p>
 
-      <form
-        className="lg:w-3/4 h-auto space-y-6 font-montserrat mx-auto my-15"
-        onSubmit={handleSubmit}
-      >
-        <input
-          type="text"
-          name="fullName"
-          value={formData.fullName}
-          placeholder="Full Name"
-          autoComplete="fullName"
-          required
-          onChange={handleChange}
-          className="w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
-        />
-
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          placeholder="Email"
-          autoComplete="email"
-          required
-          onChange={handleChange}
-          className="w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
-        />
-
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          placeholder="Password"
-          autoComplete="password"
-          required
-          onChange={handleChange}
-          className="w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
-        />
-
-        <input
-          type="password"
-          name="confirmPassword"
-          value={formData.confirmPassword}
-          placeholder="Confirm Password"
-          autoComplete="confirmPassword"
-          required
-          onChange={handleChange}
-          className="w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 rounded-3xl outline-none focus:ring-neutral-400"
-        />
-        <button
-          type="submit"
-          className="w-full text-lg text-white font-bold bg-red-600 hover:bg-red-700
-          active:bg-red-800 transition-all duration-200 py-2 rounded-3xl cursor-pointer"
-        >
-          {selectedPlan === "free-trial" ? "Start Free Trial" : "Sign Up"}
-        </button>
-      </form>
+      <Form
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        fullName={formData.fullName}
+        email={formData.email}
+        password={formData.password}
+        confirmPassword={formData.confirmPassword}
+        passwordErr={passwordErr}
+        selectedPlan={selectedPlan}
+      />
 
       {showModal && (
         <ConfirmationModal

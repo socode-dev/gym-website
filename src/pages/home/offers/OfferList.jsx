@@ -27,11 +27,11 @@ const WhatWeOffer = () => {
         />
       </div>
 
-      <div className="w-full tablet:w-1/2 tablet:h-full">
+      <div className="w-full tablet:w-1/2 tablet:h-full tablet:rounded-l-3xl overflow-hidden shadow-3xl">
         <img
           src={Receptionist}
           alt="Receptionist Welcoming Members"
-          className="w-full h-full tablet:rounded-l-3xl"
+          className="w-full h-full"
         />
       </div>
     </section>
