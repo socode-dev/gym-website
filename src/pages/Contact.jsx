@@ -12,7 +12,17 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9132406839575!2d-74.00601568459346!3d40.71277617933064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a3167d42d35%3A0x8fbd305b2ac1946e!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1641511362017!5m2!1sen!2sus";
 
   const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    if (name === "email") {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(value)) {
+        setEmailErr("Please enter a valid email address.");
+      } else {
+        setEmailErr("");
+      }
+    }
   };
 
   const handleSubmit = (e) => {

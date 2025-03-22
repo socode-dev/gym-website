@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
+import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
 
 const Form = ({
   handleSubmit,
@@ -8,6 +9,7 @@ const Form = ({
   email,
   password,
   confirmPassword,
+  emailErr,
   passwordErr,
   selectedPlan,
 }) => {
@@ -33,17 +35,21 @@ const Form = ({
           onChange={handleChange}
           className="w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 shadow-3xl rounded-3xl outline-none focus:ring-neutral-400"
         />
-
-        <input
-          type="email"
-          name="email"
-          value={email}
-          placeholder="Email"
-          autoComplete="email"
-          required
-          onChange={handleChange}
-          className="w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 shadow-3xl rounded-3xl outline-none focus:ring-neutral-400"
-        />
+        <div>
+          <input
+            type="email"
+            name="email"
+            value={email}
+            placeholder="Email"
+            autoComplete="email"
+            required
+            onChange={handleChange}
+            className="w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 shadow-3xl rounded-3xl outline-none focus:ring-neutral-400"
+          />
+          {emailErr && (
+            <p className="text-red-500 -z-50 text-sm mt-1">{emailErr}</p>
+          )}
+        </div>
         <div className="w-full h-10 relative">
           <input
             type={showPassword ? "text" : "password"}
@@ -60,9 +66,9 @@ const Form = ({
             className="absolute right-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer"
           >
             {showPassword ? (
-              <FaEye className="text-neutral-400 dark:text-neutral-600" />
+              <VisibilityOutlinedIcon className="text-neutral-400 dark:text-neutral-600" />
             ) : (
-              <FaEyeSlash className="text-neutral-400 dark:text-neutral-600" />
+              <VisibilityOffOutlinedIcon className="text-neutral-400 dark:text-neutral-600" />
             )}
           </span>
         </div>
@@ -83,9 +89,9 @@ const Form = ({
             className="absolute right-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer"
           >
             {showConfirmPassword ? (
-              <FaEye className="text-neutral-400 dark:text-neutral-600" />
+              <VisibilityOutlinedIcon className="text-neutral-400 dark:text-neutral-600" />
             ) : (
-              <FaEyeSlash className="text-neutral-400 dark:text-neutral-600" />
+              <VisibilityOffOutlinedIcon className="text-neutral-400 dark:text-neutral-600" />
             )}
           </span>
         </div>

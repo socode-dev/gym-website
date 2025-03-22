@@ -12,7 +12,9 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < lastScrollY) {
+      if (window.scrollY === 0) {
+        setShowHeader(true);
+      } else if (window.scrollY < lastScrollY) {
         setShowHeader(true);
       } else {
         setShowHeader(false);
@@ -43,7 +45,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full bg-white dark:bg-black flex py-2.5 justify-center items-center shadow-3xl transition-transform duration-500 ${
+      className={`fixed top-0 z-50 w-full bg-white dark:bg-black flex py-2.5 justify-center items-center dark:border-4 dark:border-neutral-800 shadow-3xl transition-transform duration-500 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >

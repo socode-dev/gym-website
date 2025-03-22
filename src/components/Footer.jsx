@@ -5,7 +5,7 @@ const Footer = ({ DumbbellIcon, LocationOnIcon, PhoneIcon, EmailIcon }) => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full h-auto text-black dark:text-white bg-neutral-100 shadow-3xl dark:bg-neutral-800">
+    <footer className="w-full h-auto text-black dark:text-white bg-neutral-100 shadow-3xl dark:bg-neutral-800 dark:border-4 dark:border-neutral-900">
       <div className="p-4 lg:flex ">
         <div className="flex flex-col gap-y-4 w-fit ">
           <h2 className="flex items-center text-4xl text-red-600 font-extrabold font-raleway">

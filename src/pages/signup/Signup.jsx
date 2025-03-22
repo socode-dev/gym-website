@@ -5,6 +5,7 @@ import ConfirmationModal from "./ConfirmationModal";
 
 const SignUp = () => {
   const [showModal, setShowModal] = useState(false);
+  const [emailErr, setEmailErr] = useState("");
   const [passwordErr, setPasswordErr] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
   const initialPlan = searchParams.get("plan") || "basic";
@@ -81,7 +82,17 @@ const SignUp = () => {
   };
 
   const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    if (name === "email") {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(value)) {
+        setEmailErr("Please enter a valid email address.");
+      } else {
+        setEmailErr("");
+      }
+    }
   };
 
   const handleSubmit = (e) => {
@@ -156,6 +167,7 @@ const SignUp = () => {
         email={formData.email}
         password={formData.password}
         confirmPassword={formData.confirmPassword}
+        emailErr={emailErr}
         passwordErr={passwordErr}
         selectedPlan={selectedPlan}
       />
