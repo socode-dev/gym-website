@@ -82,7 +82,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
         id="mobileMenu"
         onClick={toggleMenu}
         aria-label="mobile-navigation"
-        className={`w-full flex flex-col overflow-auto font-montserrat gap-8 fixed top-0 left-0 right-0 bottom-0 h-screen z-50 bg-inherit py-3 px-4 lg:hidden transition-all duration-300 ease-in-out transform ${
+        className={`w-full flex flex-col overflow-y-scroll font-montserrat gap-8 fixed top-0 left-0 right-0 bottom-0 h-screen z-50 bg-inherit py-3 px-4 lg:hidden transition-all duration-300 ease-in-out transform ${
           menuOpen
             ? "visible opacity-100 scale-100 translate-y-0"
             : "invisible opacity-0 scale-0 -translate-y-full"
@@ -97,7 +97,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
         <hr className="w-full border-2  border-neutral-600 dark:border-neutral-500" />
         <Button
           buttonText="Join Now"
-          buttonWidth="w-full"
+          buttonWidth="w-2/3"
           buttonAlign="self-center"
           navigation="membership"
         />
