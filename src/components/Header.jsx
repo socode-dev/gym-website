@@ -45,7 +45,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full bg-white dark:bg-black flex py-2 justify-center items-center dark:border-b-4 dark:border-b-neutral-800 shadow-3xl transition-transform duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full bg-white dark:bg-black flex py-2 justify-center items-center dark:border-b-4 dark:border-b-neutral-800 shadow-3xl transition-transform duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >

@@ -23,7 +23,7 @@ const Testimonials = () => {
 
   return (
     <div
-      className="w-full md:w-4/6 h-[550px] relative 
+      className="w-full md:w-4/6 h-[520px] relative 
     bg-inherit py-10 my-10 space-y-7 overflow-hidden"
     >
       <h3 className="text-2xl text-center font-bold font-raleway ">
@@ -36,12 +36,12 @@ const Testimonials = () => {
         {[...testimonials, ...testimonials].map((testimonial, index) => (
           <div
             key={index + 1}
-            className="bg-neutral-200 dark:bg-neutral-800 w-72 py-2 px-3 rounded-3xl shadow-lg shadow-neutral-300"
+            className="bg-neutral-200 dark:bg-neutral-800 w-72 py-2 px-3 rounded-3xl shadow-3xl"
           >
             <img
               src={testimonial.avatar}
               alt={testimonial.name}
-              className="w-12 h-12 rounded-full mx-auto ring-2 ring-neutral-200"
+              className="w-12 h-12 rounded-full mx-auto ring-4 ring-neutral-100 dark:ring-neutral-700"
             />
             <h3 className="text-xl font-bold font-raleway text-center mt-4">
               {testimonial.name}

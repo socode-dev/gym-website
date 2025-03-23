@@ -67,7 +67,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-neutral-300 dark:text-neutral-700  bg-neutral-800 dark:bg-neutral-300 p-2 rounded-full hover:rotate-180 hover:scale-90 transition-transform duration-300"
+          className="text-neutral-300 dark:text-neutral-700  bg-neutral-800 dark:bg-neutral-300 p-2 rounded-full hover:rotate-180 hover:scale-50 transition-transform duration-300"
         >
           <FaFacebook size={30} />
         </a>
@@ -75,7 +75,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-neutral-300 dark:text-neutral-700  bg-neutral-800 dark:bg-neutral-300 p-2 rounded-full hover:rotate-180 hover:scale-90 transition-transform duration-300"
+          className="text-neutral-300 dark:text-neutral-700  bg-neutral-800 dark:bg-neutral-300 p-2 rounded-full hover:rotate-180 hover:scale-50 transition-transform duration-300"
         >
           <FaInstagram size={30} />
         </a>
@@ -83,7 +83,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           href="https://twitter.com"
           target="_blank"
           rel="noopener noreferral"
-          className="text-neutral-300 dark:text-neutral-700  bg-neutral-800 dark:bg-neutral-300 p-2 rounded-full hover:rotate-180 hover:scale-90 transition-transform duration-300"
+          className="text-neutral-300 dark:text-neutral-700  bg-neutral-800 dark:bg-neutral-300 p-2 rounded-full hover:rotate-180 hover:scale-50 transition-transform duration-300"
         >
           <FaTwitter size={30} />
         </a>
@@ -91,7 +91,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           href="https://linkedin.com"
           target="_blank"
           rel="noopener noreferral"
-          className="text-neutral-300 dark:text-neutral-700  bg-neutral-800 dark:bg-neutral-300 p-2 rounded-full hover:rotate-180 hover:scale-90 transition-transform duration-300"
+          className="text-neutral-300 dark:text-neutral-700  bg-neutral-800 dark:bg-neutral-300 p-2 rounded-full hover:rotate-180 hover:scale-50 transition-transform duration-300"
         >
           <FaLinkedin size={30} />
         </a>
