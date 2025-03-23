@@ -24,7 +24,7 @@ const Form = ({
       className="mobile:w-4/5 tablet:w-3/4 h-auto font-montserrat mx-auto my-15"
       onSubmit={handleSubmit}
     >
-      <div className="space-y-5">
+      <div className="space-y-6">
         <input
           type="text"
           name="fullName"
@@ -33,7 +33,7 @@ const Form = ({
           autoComplete="fullName"
           required
           onChange={handleChange}
-          className="w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 shadow-3xl rounded-3xl outline-none focus:ring-neutral-400"
+          className="w-full px-3 py-2 bg-neutral-100 dark:bg-neutral-800 ring-4 ring-neutral-200 dark:ring-neutral-600 shadow-3xl rounded-3xl outline-none focus:ring-neutral-400"
         />
         <div>
           <input
@@ -44,7 +44,7 @@ const Form = ({
             autoComplete="email"
             required
             onChange={handleChange}
-            className="w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 shadow-3xl rounded-3xl outline-none focus:ring-neutral-400"
+            className="w-full px-3 py-2 bg-neutral-100 dark:bg-neutral-800 ring-4 ring-neutral-200 dark:ring-neutral-600 shadow-3xl rounded-3xl outline-none focus:ring-neutral-400"
           />
           {emailErr && (
             <p className="text-red-500 -z-50 text-sm mt-1">{emailErr}</p>
@@ -59,7 +59,7 @@ const Form = ({
             autoComplete="password"
             required
             onChange={handleChange}
-            className="absolute w-full px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 shadow-3xl rounded-3xl outline-none focus:ring-neutral-400"
+            className="absolute w-full px-3 py-2 bg-neutral-100 dark:bg-neutral-800 ring-4 ring-neutral-200 dark:ring-neutral-600 shadow-3xl rounded-3xl outline-none focus:ring-neutral-400"
           />
           <span
             onClick={revealPass}
@@ -82,7 +82,7 @@ const Form = ({
             autoComplete="confirmPassword"
             required
             onChange={handleChange}
-            className="w-full absolute px-3 py-2 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 shadow-3xl rounded-3xl outline-none focus:ring-neutral-400"
+            className="w-full absolute px-3 py-2 bg-neutral-100 dark:bg-neutral-800 ring-4 ring-neutral-200 dark:ring-neutral-600 shadow-3xl rounded-3xl outline-none focus:ring-neutral-400"
           />
           <span
             onClick={revealConfirmPass}

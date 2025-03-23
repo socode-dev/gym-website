@@ -45,7 +45,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full bg-white dark:bg-black flex py-2.5 justify-center items-center dark:border-4 dark:border-neutral-800 shadow-3xl transition-transform duration-500 ${
+      className={`fixed top-0 z-50 w-full bg-white dark:bg-black flex py-2.5 justify-center items-center dark:border-4 dark:border-neutral-800 shadow-3xl transition-transform duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -82,7 +82,7 @@ const Header = ({ menuOpen, setMenuOpen, DumbbellIcon }) => {
         id="mobileMenu"
         onClick={toggleMenu}
         aria-label="mobile-navigation"
-        className={`w-full flex flex-col overflow-auto font-montserrat gap-8 fixed top-0 bottom-0 h-screen z-50 bg-inherit py-3 px-4 lg:hidden transition-all duration-300 ease-in-out transform ${
+        className={`w-full flex flex-col overflow-auto font-montserrat gap-8 fixed top-0 left-0 right-0 bottom-0 h-screen z-50 bg-inherit py-3 px-4 lg:hidden transition-all duration-300 ease-in-out transform ${
           menuOpen
             ? "visible opacity-100 scale-100 translate-y-0"
             : "invisible opacity-0 scale-0 -translate-y-full"

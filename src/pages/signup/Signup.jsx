@@ -134,7 +134,7 @@ const SignUp = () => {
             id="changePlan"
             value={selectedPlan}
             onChange={handlePlanChange}
-            className="w-full py-2 px-4 text-base font-montserrat font-semibold bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 shadow-3xl rounded-3xl cursor-pointer"
+            className="w-full py-2 px-4 text-base font-montserrat font-semibold bg-neutral-100 dark:bg-neutral-800 ring-4 ring-neutral-200 dark:ring-neutral-600 shadow-3xl rounded-3xl cursor-pointer"
           >
             {Object.keys(plans).map((key) => (
               <option key={key} value={key} className="mx-auto">
@@ -153,7 +153,7 @@ const SignUp = () => {
         </ul>
       </div>
 
-      <p className="text-sm italic w-fit mx-auto font-montserrat bg-neutral-200 dark:bg-neutral-800 rounded my-8 p-2">
+      <p className="text-sm italic w-fit mx-auto font-montserrat bg-neutral-100 dark:bg-neutral-800 rounded my-8 p-2">
         {selectedPlan === "free-trial"
           ? "📝 Membership"
           : "📩 Payment and Membership"}{" "}

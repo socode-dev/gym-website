@@ -97,7 +97,7 @@ const Footer = ({ DumbbellIcon, LocationOnIcon, PhoneIcon, EmailIcon }) => {
         </div>
       </div>
 
-      <div className="w-full bg-neutral-200 dark:bg-black pt-5 pb-16 px-3">
+      <div className="w-full bg-neutral-200 dark:bg-black pt-5 pb-16 px-1">
         <p className="text-base text-center italic font-montserrat">
           &copy; {year} XtremeFit. All Rights Reserved. By{" "}
           <a

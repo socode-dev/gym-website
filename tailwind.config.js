@@ -13,7 +13,7 @@ export default {
         montserrat: ["Montserrat", "sans-serif"],
       },
       boxShadow: {
-        "3xl": "0 0 15px rgba(0, 0, 0, 0.5)",
+        "3xl": "0 0 10px rgba(0, 0, 0, 0.4)",
       },
     },
   },

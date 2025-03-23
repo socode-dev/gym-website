@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
   const [successMessage, setSuccessMessage] = useState(null);
+  const [emailErr, setEmailErr] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,7 +41,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
         Contact Us
       </h2>
 
-      <div className="w-full tablet:w-4/6 laptop:w-3/5 text-base mt-15 font-montserrat space-y-3 mx-auto">
+      <div className="w-full  mobile:w-4/5 tablet:w-3/4 laptop:w-4/6 text-base mt-15 font-montserrat space-y-3 mx-auto">
         <p>
           <strong>
             <LocationOnIcon className="text-red-600 text-xl mr-2" /> Location:
@@ -61,12 +62,12 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
         </p>
       </div>
 
-      <div className=" flex justify-center gap-6 my-6">
+      <div className=" flex justify-center gap-6 my-7">
         <a
           href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-800 hover:rotate-180 transition duration-300"
+          className="text-neutral-300 dark:text-neutral-700  bg-neutral-800 dark:bg-neutral-300 p-2 rounded-full hover:rotate-180 hover:scale-90 transition-transform duration-300"
         >
           <FaFacebook size={30} />
         </a>
@@ -74,7 +75,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-red-500 hover:rotate-180 transition duration-300"
+          className="text-neutral-300 dark:text-neutral-700  bg-neutral-800 dark:bg-neutral-300 p-2 rounded-full hover:rotate-180 hover:scale-90 transition-transform duration-300"
         >
           <FaInstagram size={30} />
         </a>
@@ -82,9 +83,17 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
           href="https://twitter.com"
           target="_blank"
           rel="noopener noreferral"
-          className="text-blue-500 hover:rotate-180 transition duration-300"
+          className="text-neutral-300 dark:text-neutral-700  bg-neutral-800 dark:bg-neutral-300 p-2 rounded-full hover:rotate-180 hover:scale-90 transition-transform duration-300"
         >
           <FaTwitter size={30} />
+        </a>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferral"
+          className="text-neutral-300 dark:text-neutral-700  bg-neutral-800 dark:bg-neutral-300 p-2 rounded-full hover:rotate-180 hover:scale-90 transition-transform duration-300"
+        >
+          <FaLinkedin size={30} />
         </a>
       </div>
 
@@ -92,7 +101,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
         onSubmit={handleSubmit}
         className="w-full mobile:w-4/5 tablet:w-3/4 laptop:w-4/6 mx-auto mt-7"
       >
-        <div className="w-full space-y-5">
+        <div className="w-full space-y-7">
           <input
             type="text"
             name="name"
@@ -101,19 +110,24 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full py-2 px-3 bg-neutral-200 dark:bg-neutral-800  ring-4 ring-neutral-300 dark:ring-neutral-600 text-white font-montserrat rounded-3xl shadow-3xl focus:outline-none focus:ring-neutral-500 transition duration-200"
+            className="w-full py-2 px-3 bg-neutral-100 dark:bg-neutral-800 ring-4 ring-neutral-200 dark:ring-neutral-600 font-montserrat rounded-3xl shadow-3xl focus:outline-none focus:ring-neutral-300 transition duration-200"
           />
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            autoComplete="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="w-full py-2 px-3 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 text-white font-montserrat rounded-3xl shadow-3xl focus:outline-none focus:ring-neutral-500 transition duration-200"
-          />
+          <div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              autoComplete="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full py-2 px-3 bg-neutral-100 dark:bg-neutral-800 ring-4 ring-neutral-200 dark:ring-neutral-600 font-montserrat rounded-3xl shadow-3xl focus:outline-none focus:ring-neutral-300 transition duration-200"
+            />
+            {emailErr && (
+              <p className="text-red-500 -z-50 text-sm mt-1">{emailErr}</p>
+            )}
+          </div>
 
           <textarea
             name="message"
@@ -122,7 +136,7 @@ const Contact = ({ LocationOnIcon, PhoneIcon, EmailIcon }) => {
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-full py-2 px-3 bg-neutral-200 dark:bg-neutral-800 ring-4 ring-neutral-300 dark:ring-neutral-600 text-white font-montserrat rounded-3xl shadow-3xl focus:outline-none focus:ring-neutral-500 transition duration-200 resize-none "
+            className="w-full py-2 px-3 bg-neutral-100 dark:bg-neutral-800 ring-4 ring-neutral-200 dark:ring-neutral-600 font-montserrat rounded-3xl shadow-3xl focus:outline-none focus:ring-neutral-300 transition duration-200 resize-none "
           />
         </div>
 
