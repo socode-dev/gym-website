@@ -102,7 +102,8 @@ const Footer = ({ DumbbellIcon, LocationOnIcon, PhoneIcon, EmailIcon }) => {
           &copy; {year} XtremeFit. All Rights Reserved. By{" "}
           <a
             target="_blank"
-            href="https://github.com/Sammytee98?tab=repositories"
+            rel="noopener noreferrer"
+            href="https://github.com/socode-dev?tab=repositories"
             className="text-red-600 font-bold not-italic"
           >
             Big Sam.
